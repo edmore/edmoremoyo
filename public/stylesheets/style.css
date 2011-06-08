@@ -38,7 +38,7 @@ header nav a:hover{
 color: #640B00;
 }
 
-footer nav a{
+footer nav, section#projects a{
 color : #333333;
 }
 
@@ -102,7 +102,7 @@ margin: 0 20px 0 0;
 display:inline;
 }
 
-section#about{
+section#about, section#projects{
   float: left;
   width: 74%;
   margin-bottom: 50px;

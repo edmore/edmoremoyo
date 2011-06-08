@@ -13,6 +13,10 @@ module NavigationHelpers
     "/profile"
   end
 
+  def projects
+    "/projects"
+  end
+
 end
 
 RSpec.configuration.include NavigationHelpers, :type => :acceptance
