@@ -1,0 +1,8 @@
+= semantic_form_for  @profile, :as => :profile, :html => {:method => :put}  do |f|
+  = f.inputs do
+    = f.input :summary, :as => :text
+    = f.input :skills, :as => :text
+    = f.input :education, :as => :text
+    = f.input :experience, :as => :text
+
+    = f.submit

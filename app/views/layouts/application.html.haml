@@ -1,0 +1,19 @@
+!!!
+%html{:dir => "ltr", :lang => "en-US"}
+  %head
+    /[if lt IE 9]
+      <script type="text/javascript">
+      document.createElement("nav" );
+      document.createElement("header" );
+      document.createElement("footer" );
+      document.createElement("section" );
+      document.createElement("article" );
+      </script>
+    %title @edmore_moyo
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    %p.notice= notice
+    %p.alert= alert
+    = yield

@@ -1,0 +1,81 @@
+/* -------------------------------------------------------------------------------------------------
+
+Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+form.formtastic fieldset > ol > li p.inline-hints { color:#333; }
+
+HINT:
+The following style may be *conditionally* included for improved support on older versions of IE(<8)
+form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
+
+--------------------------------------------------------------------------------------------------*/
+form.formtastic {
+float: left;
+overflow: hidden;
+width: 100%;
+}
+form.formtastic fieldset > ol > li.string input,
+form.formtastic fieldset > ol > li.numeric input,
+form.formtastic fieldset > ol > li.password input,
+form.formtastic fieldset > ol > li.phone input,
+form.formtastic fieldset > ol > li.email input {
+  width: 25%;
+}
+
+form.formtastic fieldset > ol > li.text textarea {
+  width: 40%;
+  height: 100px;
+}
+
+form.formtastic fieldset > ol h3 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+form.formtastic fieldset > ol > li,
+form.formtastic fieldset {
+  overflow: hidden;
+}
+
+form.formtastic legend {
+  color: #333;
+}
+form.formtastic label {
+  padding-right: 0;
+}
+form li.grouped fieldset li {
+  float: left;
+}
+
+form li.grouped fieldset li label{
+  font-size: 12px;
+  float: none;
+  width: auto;
+}
+form li.grouped fieldset li input {
+  margin-right: 10px;
+}
+form.formtastic fieldset > ol > li fieldset.address ol {
+  width: 100%;
+  padding-left: 0;
+}
+form.formtastic li textarea {
+  width: 40%;
+  height: 100px;
+}
+form.formtastic.custom_form h3 {
+  margin-top: 1em;
+}
+form.formtastic.custom_form li.grouped h3 {
+  width:25%;
+  float: left;
+}
+form.formtastic.custom_form li.grouped fieldset {
+  overflow: visible;
+}
+form.formtastic.custom_form li.grouped ol {
+  padding-left: 0;
+}

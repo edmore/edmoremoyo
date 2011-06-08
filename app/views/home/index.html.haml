@@ -1,0 +1,29 @@
+=render :partial => 'site_header'
+
+%section{:id => "about"}
+  %article{:class => "profile"}
+    %header
+      %h2 #summary
+    %p= @profile.summary
+    %footer
+
+  %article{:class => "skills"}
+    %header
+      %h2 #skills
+    %p= @profile.skills
+    %footer
+
+  %article{:class => "education"}
+    %header
+      %h2 #education
+    %p= @profile.education
+    %footer
+
+  %article{:class => "experience"}
+    %header
+      %h2 #experience
+    %p= @profile.experience
+    %footer
+=render :partial => 'site_sidebar'
+=render :partial => 'site_footer'
+

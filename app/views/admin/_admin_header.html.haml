@@ -1,0 +1,12 @@
+%header{:id => "page_header"}
+  %h1 Welcome to the Admin
+  %nav
+    %ul
+      %li
+        =link_to "Logout", destroy_user_session_path
+      %li
+        =link_to "Profile", profile_path
+      %li
+        =link_to "Social Media", "#"
+      %li
+        =link_to "Settings", "#"
