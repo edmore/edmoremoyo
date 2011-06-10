@@ -3,7 +3,7 @@ body{
   margin:15px auto;
   font-family: Gothic;
   font-size: 1em;
-  background:#FFFDF9;
+  background:#FFFFFF;
 }
 
 p{
@@ -31,14 +31,30 @@ header#page_header p{
 
 header nav a{
 text-decoration :none;
+border-bottom: 1px solid #333333;
 color : #333333;
+font-size: 1.2em;
 }
 
 header nav a:hover{
-color: #640B00;
+text-decoration :none;
+border-top: 1px solid #333333;
+color : #333333;
 }
 
-footer nav, section#projects a{
+footer nav  a{
+color : #333333;
+text-decoration :none;
+border-bottom: 1px solid #333333;
+}
+
+footer nav a:hover{
+text-decoration :none;
+border-top: 1px solid #333333;
+color : #333333;
+}
+
+section#projects a{
 color : #333333;
 }
 
@@ -78,7 +94,6 @@ h3{
 
 
 header#page_header nav ul{
-background: #e3e3e3;
 text-shadow: 0 1px 0 #f5f5f5;
 }
 
@@ -102,6 +117,10 @@ margin: 0 20px 0 0;
 display:inline;
 }
 
+footer nav{
+margin-bottom: 35px;
+}
+
 section#about, section#projects{
   float: left;
   width: 74%;
@@ -114,7 +133,6 @@ section#social_links_sidebar{
   width: 16%;
   border-left: 2px dotted #CCC;
   border-right: 2px dotted #CCC;
-
 }
 
 footer#page_footer{
@@ -122,6 +140,14 @@ footer#page_footer{
   width: 100%;
   display: block;
   text-align: center;
+  text-shadow: 0 1px 0 #f5f5f5;
+  width: 866px;
+}
+
+footer p{
+  font-size: 1em;
+  font-style:italic;
+  color: #640B00;
 }
 
 article{
