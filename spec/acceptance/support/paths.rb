@@ -17,6 +17,10 @@ module NavigationHelpers
     "/projects"
   end
 
+  def thoughts_in_bits
+    "/posts"
+  end
+
 end
 
 RSpec.configuration.include NavigationHelpers, :type => :acceptance

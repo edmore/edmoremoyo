@@ -8,6 +8,7 @@ PersonalBlog::Application.routes.draw do
   root :to => "home#index"
   resource :profile, :only => [:show, :update]
   resource :projects
+  resources :posts
 
 
   # The priority is based upon order of creation:

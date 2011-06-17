@@ -1,0 +1,6 @@
+- semantic_form_for @post do |p|
+  - p.inputs do
+    = p.input :title
+    = p.input :body, :as => :text, :input_html => {:rows => 25}
+
+    = p.commit_button

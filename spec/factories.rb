@@ -15,3 +15,8 @@ Factory.define :profile do |f|
 
 end
 
+Factory.define :post do |f|
+  f.title  'My Blog'
+  f.body  'This is my first blog'
+end
+
