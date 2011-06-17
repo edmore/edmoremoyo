@@ -121,12 +121,22 @@ footer nav{
 margin-bottom: 35px;
 }
 
-section#about, section#projects{
+section#about, section#projects, section#blog, section#post{
   float: left;
   width: 74%;
   margin-bottom: 50px;
   margin-top: 20px;
 }
+
+/* DISQUS */
+div#disqus_thread{
+  clear:both;
+  width : 68%;
+}
+
+#disqus_thread .dsq-subscribe-email { display: none; }
+#disqus_thread .dsq-subscribe-rss { display: none; }
+
 
 section#social_links_sidebar{
   float: left;

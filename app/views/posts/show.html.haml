@@ -1,0 +1,13 @@
+=render :partial => 'home/site_header'
+
+%section{:id => "post"}
+  %article{:class => "posts", :id => "post_#{@post.id}"}
+    %header
+      %h2= @post.title
+    %p= @post.body
+    %footer
+
+= raw(disqus_thread)
+
+
+=render :partial => 'home/site_footer'

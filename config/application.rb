@@ -34,6 +34,14 @@ module PersonalBlog
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Configure the default encoding used in templates for Ruby 1.9.
+    config.after_initialize do
+    Disqus::defaults[:account] = "edmoremoyo"
+    # so that the comments will load up in development environment
+    Disqus::defaults[:developer] = true
+    Disqus::defaults[:container_id] = "disqus_thread"
+    Disqus::defaults[:show_powered_by] = false
+    end
+
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
