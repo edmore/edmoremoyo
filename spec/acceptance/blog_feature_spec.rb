@@ -11,7 +11,7 @@ feature "Blog Feature", %q{
     @post2 = Factory.create(:post, :title => "The test blog 2", :body => "The blog body 2")
   end
 
-  scenario "I should see a blog index page" do
+  scenario "I should see a blog overview page" do
     visit thoughts_in_bits
     page.should have_css("h2", :text => "#my_blog_index")
     page.should have_css("article#blog_#{@post1.id} header>h3>a", :text => "The test blog")

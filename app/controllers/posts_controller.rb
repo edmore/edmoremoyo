@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authenticate_user!, :except => [:show, :overview]
   before_filter :load_user
   before_filter :load_post
   before_filter :load_posts
@@ -14,6 +14,9 @@ class PostsController < ApplicationController
   end
 
   def index
+  end
+
+  def overview
   end
 
   def show

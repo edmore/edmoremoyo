@@ -18,7 +18,7 @@ module NavigationHelpers
   end
 
   def thoughts_in_bits
-    "/posts"
+    "/posts/overview"
   end
 
 end
