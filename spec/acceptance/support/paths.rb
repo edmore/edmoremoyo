@@ -21,6 +21,10 @@ module NavigationHelpers
     "/posts/overview"
   end
 
+  def posts_index
+    "/posts"
+  end
+
 end
 
 RSpec.configuration.include NavigationHelpers, :type => :acceptance

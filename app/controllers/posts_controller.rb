@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   end
 
   def load_posts
-    @posts = Post.all
+    @posts = Post.ordered_by("created_at DESC")
   end
 
 

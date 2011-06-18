@@ -1,16 +1,18 @@
-=render :partial => 'home/site_header'
+=render :partial => "admin/admin_header"
+%h2 Blogs
+=link_to "Add", new_post_path
 
-%section{:id => "blog"}
-  %h2 #my_blog_index
-
-  - @posts.each do |post|
-    %article{:id => "blog_#{post.id}", :class => "blogs"}
-      %header
-        %h3
-          =link_to post.title, post_path(post)
-      %p= post.body
-      %footer= post.created_at.strftime("%d-%m-%Y")
-
-=render :partial => 'home/site_sidebar'
-=render :partial => 'home/site_footer'
-
+%table.entries
+  %thead
+    %tr{:align => "left"}
+      %th Title
+      %th Date Posted
+      %th
+      %th
+  %tbody
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.date_to_string
+        %td= link_to "Edit", edit_post_path(post)
+        %td= link_to "Delete", post_path(post), :confirm => 'Are you sure you want to delete this post?', :method => 'delete'
