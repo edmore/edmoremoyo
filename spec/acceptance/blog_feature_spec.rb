@@ -61,4 +61,24 @@ feature "Blog Feature", %q{
     page.should have_content("Post successfully created.")
   end
 
+  scenario "editing a post" do
+    post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
+    post2 = Factory.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
+    login_to_admin
+    visit posts_index
+    within(".entries tbody tr:nth-child(2)") do
+      click_link("Edit")
+    end
+    page.should have_css("h2", :text => "Edit Blog")
+    fill_in("Title", :with => "Edited title")
+    click_button("Update Post")
+
+    page.should have_content("Post successfully updated.")
+    should_have_table('table.entries tbody',[
+
+      ['The test blog 2', post2.date_to_string],
+      ['Edited title', post1.date_to_string]
+                                         ] )
+  end
+
 end

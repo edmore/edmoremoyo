@@ -16,6 +16,9 @@ class PostsController < ApplicationController
   def index
   end
 
+  def edit
+  end
+
   def overview
   end
 
@@ -34,6 +37,24 @@ class PostsController < ApplicationController
     else
       render :action => "new"
     end
+  end
+
+  def update
+    if @post.update_attributes(params[:post])
+      flash[:notice] = 'Post successfully updated.'
+      redirect_to posts_path
+    else
+      render :action => :edit, :id => @post.id
+    end
+  end
+
+  def destroy
+    if @post.destroy
+      flash[:notice] = 'Post successfully deleted.'
+    else
+      flash[:error] = 'Post could not be deleted.'
+    end
+      redirect_to posts_path
   end
 
   private
