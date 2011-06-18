@@ -9,8 +9,7 @@
         %header
           %h3
             =link_to post.title, post_path(post)
-        %p= post.body
-        %footer= post.date_to_string
+        %footer= post.date_to_readable
   -else
     = "Sorry no posts present at this time."
 

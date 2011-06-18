@@ -18,10 +18,14 @@ describe Post do
       Timecop.freeze(1998, 7, 25, 7, 23)
       post = Factory.create(:post)
       post.date_to_string.should == "25-07-1998"
-
     end
-
   end
 
-
+  describe "#date_to_readable" do
+    it 'should return the created_at date as a human readable string' do
+      Timecop.freeze(1998, 7, 25, 7, 23)
+      post = Factory.create(:post)
+      post.date_to_readable.should == "25 July 1998"
+    end
+  end
 end

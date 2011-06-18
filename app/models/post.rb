@@ -5,4 +5,8 @@ class Post < ActiveRecord::Base
     created_at.strftime("%d-%m-%Y")
   end
 
+  def date_to_readable
+    created_at.strftime("%d %B %Y")
+  end
+
 end
