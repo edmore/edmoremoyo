@@ -6,6 +6,75 @@ body{
   background:#FFFFFF;
 }
 
+section#projects a, footer#page_footer p a{
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: Gothic;
+  color: #640B00;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin-top: 10px;
+}
+
+section#projects a:hover{
+  background-color: #640B1B;
+  color: #FFFFFF;
+}
+
+footer#page_footer p a:hover{
+  background-color: #640B1B;
+  color: #FFFFFF;
+}
+
+section#blog a{
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 1.3em;
+  font-family: Gothic;
+  color: #640B00;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin-top: 10px;
+}
+
+section#blog a:hover{
+  background-color: #640B1B;
+  color: #FFFFFF;
+}
+
+section#post h2{
+font-size: 1.2em;
+float: left;
+}
+
+section#post a{
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: Gothic;
+  font-size: 1em;
+  color: #640B00;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin-top: 10px;
+  float: right;
+}
+
+section#post a:hover{
+  background-color: #640B1B;
+  color: #FFFFFF;
+}
+
+section#post p{
+clear:both;
+}
+
+section#blog footer{
+  font-size: 15px;
+  font-family: serif;
+  font-style:italic;
+  margin-left: 10px;
+}
+
 p{
 margin:0 0 20px 0;
 }
@@ -131,7 +200,7 @@ section#about, section#projects, section#blog, section#post{
 /* DISQUS */
 div#disqus_thread{
   clear:both;
-  width : 68%;
+  width : 66%;
 }
 
 #disqus_thread .dsq-subscribe-email { display: none; }

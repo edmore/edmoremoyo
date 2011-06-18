@@ -21,8 +21,7 @@ feature "Blog Feature", %q{
     visit thoughts_in_bits
     page.should have_css("h2", :text => "#my_blog_index")
     page.should have_css("article#blog_#{post1.id} header>h3>a", :text => "The test blog")
-    page.should have_css("article#blog_#{post1.id} p", :text => "The blog body")
-    page.should have_css("article#blog_#{post1.id} footer", :text => post1.date_to_string)
+    page.should have_css("article#blog_#{post1.id} footer", :text => post1.date_to_readable)
   end
 
   scenario "I should see a particular blog post" do
@@ -47,6 +46,16 @@ feature "Blog Feature", %q{
       ['The test blog 2', post2.date_to_string],
       ['The test blog', post1.date_to_string]
                                          ] )
+  end
+
+  scenario "navigating back to blog index" do
+    post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
+    visit thoughts_in_bits
+    click_link("The test blog")
+    current_path.should == "/posts/#{post1.id}"
+    click_link("Back to Index")
+    page.current_path.should == "/posts/overview"
+
   end
 
   scenario "creating a post" do
