@@ -28,4 +28,20 @@ describe Post do
       post.date_to_readable.should == "25 July 1998"
     end
   end
+
+  describe "#title" do
+    it 'should be present' do
+      post = Factory.build(:post, :title => "")
+      post.should_not be_valid
+      post.errors[:title].should include("can't be blank")
+    end
+  end
+
+  describe "#body" do
+    it 'should be present' do
+      post = Factory.build(:post, :body => "")
+      post.should_not be_valid
+      post.errors[:body].should include("can't be blank")
+    end
+  end
 end

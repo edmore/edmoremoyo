@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  validates_presence_of :title, :body
   scope :ordered_by, lambda { |order_parameter| { :order => order_parameter }}
 
   def date_to_string
