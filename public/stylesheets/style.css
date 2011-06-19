@@ -6,7 +6,7 @@ body{
   background:#FFFFFF;
 }
 
-section#projects a, footer#page_footer p a{
+section#projects a, footer#page_footer p a, section#social_links_sidebar a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
   color: #640B00;
@@ -17,6 +17,15 @@ section#projects a, footer#page_footer p a{
 }
 
 section#projects a:hover{
+  background-color: #640B1B;
+  color: #FFFFFF;
+}
+
+section#social_links_sidebar img{
+  margin-bottom: -2px;
+}
+
+section#social_links_sidebar a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
@@ -205,20 +214,12 @@ div#disqus_thread{
 
 #disqus_thread .dsq-subscribe-email { display: none; }
 #disqus_thread .dsq-subscribe-rss { display: none; }
-div#dsq-account-dropdown a{
-  background-color: rgba(0, 0, 0, 0.05);
-  font-family: Gothic;
-  color: #640B00;
-  text-decoration: none;
-  border-radius: 3px;
-  padding: 3px 5px;
-  margin-top: 10px;
-}
+div#dsq-account-dropdown { display: none;}
+.dsq-global-toolbar-right {display: none;}
 
-div#dsq-account-dropdown a:hover{
-  background-color: #640B1B;
-  color: #FFFFFF;
-}
+.dsq-comment-footer {
+  font-family: Gothic;
+  color: #640B00;}
 
 
 section#social_links_sidebar{
