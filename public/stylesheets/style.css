@@ -143,6 +143,12 @@ section p{
   margin-right: 20px;
 }
 
+section#about p{
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: Gothic;
+  border-radius: 3px;
+  padding: 3px 5px;
+}
 
 h1{
   font-size: 1.5em;
