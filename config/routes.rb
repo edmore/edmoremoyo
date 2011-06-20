@@ -14,6 +14,8 @@ PersonalBlog::Application.routes.draw do
     end
   end
 
+  match "blog"  => "posts#overview", :as => "blog"
+  match "blog/:id"  => "posts#show", :as => "blog_item"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

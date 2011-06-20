@@ -4,7 +4,7 @@
   %article{:class => "posts", :id => "post_#{@post.id}"}
     %header
       %h2= @post.title
-      =link_to "Back to Index" , overview_posts_path
+      =link_to "Back to Index" , blog_path
     %p= @post.body
     %footer
 
