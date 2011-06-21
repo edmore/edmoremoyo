@@ -4,15 +4,6 @@ class PostsController < ApplicationController
   before_filter :load_post
   before_filter :load_posts
 
-  def update
-    #if @profile.update_attributes(params[:profile])
-      #flash[:notice] = 'Profile successfully updated.'
-      #redirect_to profile_path
-    #else
-      #render :action => :show
-    #end
-  end
-
   def index
   end
 
@@ -63,7 +54,7 @@ class PostsController < ApplicationController
   end
 
   def load_post
-    @post = Post.find(params[:id]) if params[:id]
+    @post = Post.find_by_permalink(params[:id]) if params[:id]
   end
 
   def load_posts
