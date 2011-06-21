@@ -52,7 +52,7 @@ feature "Blog Feature", %q{
     post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
     visit thoughts_in_bits
     click_link("The test blog")
-    current_path.should == "/blog/#{post1.id}"
+    current_path.should == "/blog/#{post1.title.parameterize}"
     click_link("Back to Index")
     page.current_path.should == "/blog"
 
