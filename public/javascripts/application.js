@@ -5,7 +5,7 @@ $(function(){
   $(".popup" ).click(function(event){
  event.preventDefault();
  var href = $(this).attr("href");
- var popup = window.open (href,"popup");
+ var popup = window.open (href,"");
  });
 });
 
