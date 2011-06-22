@@ -29,6 +29,13 @@ describe Post do
     end
   end
 
+  describe "#body_to_html" do
+    it 'should return the body textile text as html' do
+      post = Factory.create(:post, :body => "This is *my* text.")
+      post.body_to_html.should == "<p>This is <strong>my</strong> text.</p>"
+    end
+  end
+
   describe "#title" do
     it 'should be present' do
       post = Factory.build(:post, :title => "")

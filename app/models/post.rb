@@ -16,6 +16,10 @@ class Post < ActiveRecord::Base
     title.parameterize
   end
 
+  def body_to_html
+    RedCloth.new(body).to_html
+  end
+
   private
   def create_permalink
     self.permalink = title.parameterize
