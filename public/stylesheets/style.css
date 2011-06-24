@@ -73,7 +73,7 @@ section#post header a:hover{
   color: #FFFFFF;
 }
 
-section#post p{
+section#post p, h3{
 clear:both;
 }
 
@@ -158,11 +158,15 @@ section p{
   margin-right: 20px;
 }
 
+
 section#about p, section#post p{
-  background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
   border-radius: 3px;
   padding: 3px 5px;
+}
+
+section#about p{
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 h1{
