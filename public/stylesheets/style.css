@@ -92,11 +92,15 @@ section#post p a:hover{
   color: #FFFFFF;
 }
 
-section#blog footer, section#post footer{
+section#blog footer, section#post header p{
   font-size: 15px;
   font-family: serif;
   font-style:italic;
   margin-left: 10px;
+}
+
+section#post header p{
+  margin-top: -20px;
 }
 
 p{
@@ -183,6 +187,14 @@ h2{
   letter-spacing: 0.1em;
   color: rgb(100,11,0);
   text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+
+section#post h2{
+margin-bottom: 1px;
+}
+
+section#post header p{
+margin-left: -1px;
 }
 
 h3{
