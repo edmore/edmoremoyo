@@ -13,7 +13,7 @@ class Github
   def list_commits
     begin
     open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}").read
-    rescue OpenURI::HTTPError => @e
+    rescue OpenURI::HTTPError
       error_message
     rescue Timeout::Error
       error_message_timeout
@@ -55,7 +55,7 @@ class Github
   def commits_on_file(file_name)
     begin
     open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}/#{file_name}").read
-    rescue OpenURI::HTTPError => @e
+    rescue OpenURI::HTTPError
       error_message
     rescue Timeout::Error
       error_message_timeout
@@ -65,7 +65,7 @@ class Github
   def commit(commit_id)
     begin
     open("#{@api}/commits/show/#{@user_id}/#{@repo}/#{commit_id}").read
-    rescue OpenURI::HTTPError => @e
+    rescue OpenURI::HTTPError
       error_message
     rescue Timeout::Error
       error_message_timeout
@@ -78,7 +78,7 @@ class Github
   end
 
   def error_message
-    "Oops!!, something went wrong : #{@e.message}."
+    "Oops!!, something went wrong."
   end
 
   def error_message_timeout
