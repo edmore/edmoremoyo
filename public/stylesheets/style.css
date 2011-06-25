@@ -275,7 +275,7 @@ footer#page_footer{
   width: 866px;
 }
 
-footer p{
+footer p, section#projects footer{
   font-size: 1em;
   font-style:italic;
   color: #640B00;
