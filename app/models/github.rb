@@ -12,9 +12,11 @@ class Github
 
   def list_commits
     begin
-    open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}").read
+    open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}")
     rescue OpenURI::HTTPError
-      error_message
+      error_message_http
+    rescue SocketError
+      error_message_socket
     rescue Timeout::Error
       error_message_timeout
     end
@@ -54,9 +56,11 @@ class Github
 
   def commits_on_file(file_name)
     begin
-    open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}/#{file_name}").read
+    open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}/#{file_name}")
     rescue OpenURI::HTTPError
-      error_message
+      error_message_http
+    rescue SocketError
+      error_message_socket
     rescue Timeout::Error
       error_message_timeout
     end
@@ -64,9 +68,11 @@ class Github
 
   def commit(commit_id)
     begin
-    open("#{@api}/commits/show/#{@user_id}/#{@repo}/#{commit_id}").read
+    open("#{@api}/commits/show/#{@user_id}/#{@repo}/#{commit_id}")
     rescue OpenURI::HTTPError
-      error_message
+      error_message_http
+    rescue SocketError
+      error_message_socket
     rescue Timeout::Error
       error_message_timeout
     end
@@ -74,11 +80,19 @@ class Github
 
   private
   def parsed_json
-    ActiveSupport::JSON.decode(list_commits)
+    ActiveSupport::JSON.decode(list_commits.read)
   end
 
   def error_message
-    "Oops!!, something went wrong."
+    "Oops, something went wrong!!"
+  end
+
+  def error_message_http
+    "Oops!!, some http issues, sorry."
+  end
+
+  def error_message_socket
+    "Oops!!, please check your internet connection."
   end
 
   def error_message_timeout
