@@ -11,92 +11,68 @@ class Github
   end
 
   def list_commits
-    begin
-    open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}")
-    rescue OpenURI::HTTPError
-      error_message_http
-    rescue SocketError
-      error_message_socket
-    rescue Timeout::Error
-      error_message_timeout
-    end
+    open_api("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}")
+  end
+
+  def commits_on_file(file_name)
+    open_api("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}/#{file_name}")
+  end
+
+  def commit(commit_id)
+    open_api("#{@api}/commits/show/#{@user_id}/#{@repo}/#{commit_id}")
   end
 
   def last_commit_message
+    output = parsed_json(list_commits)
     begin
-    parsed_json["commits"][0]["message"]
+     output["commits"][0]["message"]
     rescue
-      error_message
+      "Sorry cannot show your last commit message at this time."
     end
   end
 
   def last_commit_date
+    output = parsed_json(list_commits)
     begin
-    parsed_json["commits"][0]["committed_date"]
+     output["commits"][0]["committed_date"]
     rescue
-      error_message
+      "Sorry cannot show your last commit date at this time."
     end
   end
 
   def last_commit_url
+    output = parsed_json(list_commits)
     begin
-    parsed_json["commits"][0]["url"]
+     output["commits"][0]["url"]
     rescue
-      error_message
+      "Sorry cannot show your last commit url at this time."
     end
   end
 
   def last_committer
+    output = parsed_json(list_commits)
     begin
-    parsed_json["commits"][0]["committer"]["name"]
+     output["commits"][0]["committer"]["name"]
     rescue
-      error_message
-    end
-  end
-
-  def commits_on_file(file_name)
-    begin
-    open("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}/#{file_name}")
-    rescue OpenURI::HTTPError
-      error_message_http
-    rescue SocketError
-      error_message_socket
-    rescue Timeout::Error
-      error_message_timeout
-    end
-  end
-
-  def commit(commit_id)
-    begin
-    open("#{@api}/commits/show/#{@user_id}/#{@repo}/#{commit_id}")
-    rescue OpenURI::HTTPError
-      error_message_http
-    rescue SocketError
-      error_message_socket
-    rescue Timeout::Error
-      error_message_timeout
+      "Sorry cannot show your last committer at this time."
     end
   end
 
   private
-  def parsed_json
-    ActiveSupport::JSON.decode(list_commits.read)
+  def open_api(url)
+    begin
+      open(url).read
+    rescue OpenURI::HTTPError
+      "Oops!!, some http issues, sorry."
+    rescue SocketError
+      "Oops!!, please check your internet connection."
+    rescue Timeout::Error
+      "Oops!!, some timeout issues, sorry."
+    end
   end
 
-  def error_message
-    "Oops, something went wrong!!"
-  end
-
-  def error_message_http
-    "Oops!!, some http issues, sorry."
-  end
-
-  def error_message_socket
-    "Oops!!, please check your internet connection."
-  end
-
-  def error_message_timeout
-    "Oops!!, some timeout issues, sorry."
+  def parsed_json(api_data)
+    ActiveSupport::JSON.decode(api_data)
   end
 
 end
