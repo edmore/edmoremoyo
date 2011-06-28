@@ -24,38 +24,22 @@ class Github
 
   def last_commit_message
     output = parsed_json(list_commits)
-    begin
-     output["commits"][0]["message"]
-    rescue
-      "Sorry cannot show your last commit message at this time."
-    end
+    output["commits"] ? output["commits"][0]["message"] : output
   end
 
   def last_commit_date
     output = parsed_json(list_commits)
-    begin
-     output["commits"][0]["committed_date"]
-    rescue
-      "Sorry cannot show your last commit date at this time."
-    end
+    output["commits"] ? output["commits"][0]["committed_date"] : output
   end
 
   def last_commit_url
     output = parsed_json(list_commits)
-    begin
-     output["commits"][0]["url"]
-    rescue
-      "Sorry cannot show your last commit url at this time."
-    end
+    output["commits"] ? output["commits"][0]["url"] : output
   end
 
   def last_committer
     output = parsed_json(list_commits)
-    begin
-     output["commits"][0]["committer"]["name"]
-    rescue
-      "Sorry cannot show your last committer at this time."
-    end
+    output["commits"] ? output["commits"][0]["committer"]["name"] : output
   end
 
   private
