@@ -29,7 +29,7 @@ class Github
 
   def last_commit_date
     output = parsed_json(list_commits)
-    output["commits"] ? output["commits"][0]["committed_date"] : output
+    output["commits"] ? output["commits"][0]["committed_date"].strftime("%d %B %Y %I:%M%p") : output
   end
 
   def last_commit_url
