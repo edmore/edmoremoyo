@@ -286,6 +286,6 @@ border-top: 2px dotted #CCC;
 width: 90%;
 }
 
-.gist, .gist-file, .gist-data{
+.gist .gist-file .gist-data{
   font-size: 1em;
 }
