@@ -21,4 +21,38 @@ describe Contact do
     end
   end
 
+  describe "#name" do
+    it 'should be present' do
+      contact = Factory.build(:contact, :name => "")
+      contact.should_not be_valid
+      contact.errors[:name].should include("can't be blank")
+    end
+  end
+
+  describe "#email" do
+    it 'should be present' do
+      contact = Factory.build(:contact, :email => "")
+      contact.should_not be_valid
+      contact.errors[:email].should include("can't be blank")
+    end
+
+    it "should be in the correct format" do
+      contact1 = Factory.build(:contact, :email => "etmoyo@test.com")
+      contact2 = Factory.build(:contact, :email => "etmoyo@test")
+      contact1.should be_valid
+      contact2.should_not be_valid
+
+      contact2.errors[:email].should include("is invalid")
+    end
+  end
+
+  describe "#body" do
+    it 'should be present' do
+      contact = Factory.build(:contact, :body => "")
+      contact.should_not be_valid
+      contact.errors[:body].should include("can't be blank")
+    end
+  end
+
+
 end

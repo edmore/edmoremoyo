@@ -1,8 +1,8 @@
 - semantic_form_for @contact do |p|
   - p.inputs do
-    = p.input :name, :input_html => {:required => "required", :placeholder => " Edmore Moyo ", :autofocus => "autofucus"}, :label => "Name *"
-    = p.input :email, :as => :email, :input_html => {:required => "required",:placeholder => " edmore@example.com "}, :label => "Email Address *"
-    = p.input :body, :as => :text, :input_html => {:required => "required",:rows => 10, :placeholder => " Enter message here ... "}, :label => "Message *"
+    = p.input :name, :input_html => {:required => "required", :placeholder => " Name Surname ", :autofocus => "autofucus"}, :label => "Name"
+    = p.input :email, :as => :email, :input_html => {:required => "required",:placeholder => " example@example.com "}, :label => "Email Address"
+    = p.input :body, :as => :text, :input_html => {:required => "required",:rows => 10, :placeholder => " Enter message here ... "}, :label => "Message"
     - if @my_button != 'show'
       = raw(recaptcha_tags)
       = p.commit_button "Send"
