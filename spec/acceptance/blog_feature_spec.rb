@@ -6,8 +6,6 @@ feature "Blog Feature", %q{
   I want to be able to view it
 } do
 
-  before(:each) do
-  end
 
   scenario "displays message when there are no posts" do
     visit thoughts_in_bits

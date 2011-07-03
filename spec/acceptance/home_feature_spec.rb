@@ -26,4 +26,10 @@ feature "Home Feature", %q{
     page.should have_css("h2", :text => "#my_blog_index")
   end
 
+  scenario "I should see a contacts page" do
+    visit homepage
+    click_link("Get in Touch")
+    page.should have_css("h2", :text => "#get_in_touch")
+  end
+
 end

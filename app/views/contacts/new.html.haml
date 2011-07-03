@@ -1,0 +1,11 @@
+=render :partial => 'home/site_header'
+
+%section{:id => "contact_form"}
+  %header
+    %h2 #get_in_touch
+    %p.notice= notice
+    %p.alert= alert
+  =render :partial => "form"
+
+=render :partial => 'home/site_sidebar'
+=render :partial => 'home/site_footer'

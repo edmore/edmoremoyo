@@ -14,8 +14,11 @@ PersonalBlog::Application.routes.draw do
     end
   end
 
+  resources :contacts
+
   match "blog"  => "posts#overview", :as => "blog"
   match "blog/:id"  => "posts#show", :as => "blog_item"
+  match "get_in_touch" => "contacts#new" , :as => "get_in_touch"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

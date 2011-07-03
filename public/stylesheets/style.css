@@ -289,3 +289,54 @@ width: 90%;
 .gist .gist-file .gist-data{
   font-size: 14px !important;
 }
+
+section#contact_form textarea{
+  width: 85%;
+  margin-top: 10px;
+  border: 2px solid #640B00;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+}
+
+#contact_body_input label{
+width: 65%;
+}
+
+#contact_name, #contact_email{
+width: auto;
+border: 2px solid #640B00;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+border-radius:5px;
+}
+
+section#contact_intro, section#contact_form{
+  float: left;
+  width: 60%;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+#new_contact{
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: Gothic;
+  border: 2px solid #640B00;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+  padding: 15px 15px;
+  width: 90%
+}
+
+#contact_submit{
+  width: 100px;
+  border: 2px solid #640B00;
+  float:rightright;
+  margin-bottom:0px;
+  margin-right:6px;
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+}
+

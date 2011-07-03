@@ -27,7 +27,7 @@ form.formtastic fieldset > ol > li.email input {
 
 form.formtastic fieldset > ol > li.text textarea {
   width: 40%;
-  height: 100px;
+  height: auto;
 }
 
 form.formtastic fieldset > ol h3 {

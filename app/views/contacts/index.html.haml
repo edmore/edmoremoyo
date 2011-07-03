@@ -1,0 +1,17 @@
+=render :partial => "admin/admin_header"
+%h2 Contact Info
+
+%table.entries
+  %thead
+    %tr{:align => "left"}
+      %th Name
+      %th Posted Date
+      %th
+      %th
+  %tbody
+    - @contacts.each do |contact|
+      %tr
+        %td= contact.name
+        %td= contact.date_to_string
+        %td= link_to "View", contact_path(contact)
+        %td= link_to "Delete", contact_path(contact), :confirm => 'Are you sure you want to delete this contact info?', :method => 'delete'

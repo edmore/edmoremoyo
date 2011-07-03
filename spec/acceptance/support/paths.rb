@@ -25,6 +25,10 @@ module NavigationHelpers
     "/posts"
   end
 
+  def contact_page
+    "/get_in_touch"
+  end
+
 end
 
 RSpec.configuration.include NavigationHelpers, :type => :acceptance

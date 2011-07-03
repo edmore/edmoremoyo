@@ -20,3 +20,9 @@ Factory.define :post do |f|
   f.body  'This is my first blog'
 end
 
+Factory.define :contact do |c|
+  c.name  'Edmore Moyo'
+  c.sequence(:email) { |n| "foo#{n}@gmail.com" }
+  c.body  'This is is waaa ...'
+end
+
