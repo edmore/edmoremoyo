@@ -9,6 +9,7 @@ source 'http://rubygems.org'
  gem 'disqus'
  gem 'RedCloth'
  gem 'fakeweb'
+ gem "recaptcha", :require => "recaptcha/rails"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

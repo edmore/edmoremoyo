@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(params[:contact])
-    if @contact.save
+    if verify_recaptcha(:model => @contact, :message => "Oops are you sure you're Human!") && @contact.save
       flash[:notice] = "Message sent, I will get in touch with you shortly."
       redirect_to get_in_touch_path
     else
