@@ -6,7 +6,7 @@ body{
   background:#FFFFFF;
 }
 
-section#projects a, footer#page_footer p a, section#social_links_sidebar a{
+.projects a, .page_footer p a, .social_links_sidebar a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
   color: #640B00;
@@ -16,26 +16,26 @@ section#projects a, footer#page_footer p a, section#social_links_sidebar a{
   margin-top: 10px;
 }
 
-section#projects a:hover{
+.projects a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
 
-section#social_links_sidebar img{
+.social_links_sidebar img{
   margin-bottom: -2px;
 }
 
-section#social_links_sidebar a:hover{
+.social_links_sidebar a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
 
-footer#page_footer p a:hover{
+.page_footer p a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
 
-section#blog a{
+.blog a{
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 1.2em;
   font-family: Gothic;
@@ -46,17 +46,17 @@ section#blog a{
   margin-top: 10px;
 }
 
-section#blog a:hover{
+.blog a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
 
-section#post h2{
+.post h2{
 font-size: 1.2em;
 float: left;
 }
 
-section#post header a{
+.post header a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
   font-size: 1em;
@@ -68,16 +68,16 @@ section#post header a{
   float: right;
 }
 
-section#post header a:hover{
+.post header a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
 
-section#post p, h3{
+.post p, h3{
 clear:both;
 }
 
-section#post p a{
+.post p a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
   font-size: 1em;
@@ -87,19 +87,19 @@ section#post p a{
   padding: 3px 5px;
 }
 
-section#post p a:hover{
+.post p a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
 
-section#blog footer, section#post header p{
+.blog footer, .post header p{
   font-size: 15px;
   font-family: serif;
   font-style:italic;
   margin-left: 10px;
 }
 
-section#post header p{
+.post header p{
   margin-top: -20px;
 }
 
@@ -111,16 +111,16 @@ p, li{
   line-height:20px;
 }
 
-header#page_header{
+.page_header{
 width:100%;
 }
 
-header#page_header p, section#about footer{
+.page_header p, .about footer{
   font-size: 1em;
   font-style:italic;
 }
 
-header#page_header p{
+.page_header p{
   margin-top:-20px;
   margin-left:12px;
 }
@@ -151,7 +151,7 @@ border-top: 1px solid #333333;
 color : #333333;
 }
 
-section#projects a{
+.projects a{
 color : #333333;
 }
 
@@ -163,13 +163,13 @@ section p{
 }
 
 
-section#about p, section#post p{
+.about p, .post p{
   font-family: Gothic;
   border-radius: 3px;
   padding: 3px 5px;
 }
 
-section#about p{
+.about p{
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -189,11 +189,11 @@ h2{
   text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
 }
 
-section#post h2{
+.post h2{
 margin-bottom: 1px;
 }
 
-section#post header p{
+.post header p{
 margin-left: -1px;
 }
 
@@ -208,25 +208,25 @@ h3{
 
 
 
-header#page_header nav ul{
+.page_header nav ul{
 text-shadow: 0 1px 0 #f5f5f5;
 }
 
-header#page_header nav ul, #page_footer nav ul{
+.page_header nav ul, .page_footer nav ul{
   list-style: none;
   margin: 0;
   padding: 0;
   width: 866px;
 }
 
-section#social_links_sidebar nav ul{
+.social_links_sidebar nav ul{
   list-style: none;
   margin: 5px;
   padding: 0;
   font-size: 0.8em;
 }
 
-#page_header nav ul li, footer#page_footer nav ul li{
+.page_header nav ul li, .page_footer nav ul li{
 padding:0;
 margin: 0 20px 0 0;
 display:inline;
@@ -236,7 +236,7 @@ footer nav{
 margin-bottom: 35px;
 }
 
-section#about, section#projects, section#blog, section#post{
+.about, .projects, .blog, .post{
   float: left;
   width: 74%;
   margin-bottom: 50px;
@@ -259,14 +259,14 @@ div#dsq-account-dropdown { display: none;}
   color: #640B00;}
 
 
-section#social_links_sidebar{
+.social_links_sidebar{
   float: left;
   width: 16%;
   border-left: 2px dotted #CCC;
   border-right: 2px dotted #CCC;
 }
 
-footer#page_footer{
+.page_footer{
   clear: both;
   width: 100%;
   display: block;
@@ -275,7 +275,7 @@ footer#page_footer{
   width: 866px;
 }
 
-footer p, section#projects footer{
+footer p, .projects footer{
   font-size: 1em;
   font-style:italic;
   color: #640B00;
@@ -287,7 +287,7 @@ width: 90%;
 }
 
 
-section#contact_form textarea{
+#contact_body{
   width: 85%;
   margin-top: 10px;
   border: 2px solid #640B00;
@@ -308,7 +308,7 @@ border: 2px solid #640B00;
 border-radius:5px;
 }
 
-section#contact_intro, section#contact_form{
+#contact_intro, .contact_form{
   float: left;
   width: 60%;
   margin-bottom: 20px;
@@ -330,7 +330,6 @@ section#contact_intro, section#contact_form{
   width: 100px;
   border: 2px solid #640B00;
   float:rightright;
-  margin-bottom:0px;
   margin-right:6px;
   -moz-border-radius:8px;
   -webkit-border-radius:8px;

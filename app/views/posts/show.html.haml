@@ -1,6 +1,6 @@
 =render :partial => 'home/site_header'
 
-%section{:id => "post"}
+%section{:class => "post"}
   %article{:class => "posts", :id => "post_#{@post.id}"}
     %header
       %h2= @post.title
