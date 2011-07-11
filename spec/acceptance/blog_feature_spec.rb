@@ -28,7 +28,7 @@ feature "Blog Feature", %q{
     visit thoughts_in_bits
     click_link("The test blog")
     page.should have_css("h2", :text => "The test blog")
-    page.should have_css("section#post header p", :text => "Posted on #{post1.date_to_readable}" )
+    page.should have_css(".post header p", :text => "Posted on #{post1.date_to_readable}" )
     page.should have_css("article#post_#{post1.id} p", :text => "The blog body")
   end
 
