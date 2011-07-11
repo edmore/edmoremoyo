@@ -286,9 +286,6 @@ border-top: 2px dotted #CCC;
 width: 90%;
 }
 
-.gist .gist-file .gist-data{
-  font-size: 14px !important;
-}
 
 section#contact_form textarea{
   width: 85%;
@@ -338,5 +335,9 @@ section#contact_intro, section#contact_form{
   -moz-border-radius:8px;
   -webkit-border-radius:8px;
   border-radius:8px;
+}
+
+.gist{
+  font-size: 14px;
 }
 
