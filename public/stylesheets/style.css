@@ -169,10 +169,6 @@ section p{
   padding: 3px 5px;
 }
 
-.about p{
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
 h1{
   font-size: 1.5em;
   font-family: Gothic;
@@ -188,6 +184,7 @@ h2{
   color: rgb(100,11,0);
   text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
 }
+
 
 .post h2{
 margin-bottom: 1px;
@@ -338,5 +335,18 @@ border-radius:5px;
 
 .gist{
   font-size: 14px;
+}
+
+.about p{
+border: solid 1px #640B00;
+margin-top: -17px;
+}
+
+.about h2{
+color: #FFFFFF;
+background-color: #640B00;
+width: 15%;
+border-radius: 5px;
+padding:3px;
 }
 
