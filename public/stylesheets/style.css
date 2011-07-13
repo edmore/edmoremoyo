@@ -135,7 +135,7 @@ font-size: 1.2em;
 
 header nav a:hover{
 text-decoration :none;
-border-top: 1px solid #333333;
+border-top: 2px solid #333333;
 color : #333333;
 }
 
@@ -147,7 +147,7 @@ border-bottom: 1px solid #333333;
 
 footer nav a:hover{
 text-decoration :none;
-border-top: 1px solid #333333;
+border-top: 2px solid #333333;
 color : #333333;
 }
 
@@ -165,7 +165,6 @@ section p{
 
 .about p, .post p{
   font-family: Gothic;
-  border-radius: 3px;
   padding: 3px 5px;
 }
 
@@ -346,7 +345,6 @@ margin-top: -17px;
 color: #FFFFFF;
 background-color: #640B00;
 width: 17%;
-border-radius: 5px;
 padding:3px;
 }
 
