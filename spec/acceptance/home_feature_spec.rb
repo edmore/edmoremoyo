@@ -17,13 +17,13 @@ feature "Home Feature", %q{
   scenario "I should see a projects page" do
     visit homepage
     click_link("Projects")
-    page.should have_css("h2", :text => "#my_web_footprint")
+    page.should have_css("h2", :text => "#projects")
   end
 
   scenario "I should see a blogs page" do
     visit homepage
     click_link("Thoughts in Bits")
-    page.should have_css("h2", :text => "#my_blog_index")
+    page.should have_css("h2", :text => "#blog_index")
   end
 
   scenario "I should see a contacts page" do

@@ -17,7 +17,7 @@ feature "Blog Feature", %q{
     post2 = Factory.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
 
     visit thoughts_in_bits
-    page.should have_css("h2", :text => "#my_blog_index")
+    page.should have_css("h2", :text => "blog_index")
     page.should have_css("article#blog_#{post1.id} header>h3>a", :text => "The test blog")
     page.should have_css("article#blog_#{post1.id} footer", :text => post1.date_to_readable)
   end
