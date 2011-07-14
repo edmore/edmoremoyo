@@ -3,7 +3,7 @@ module HelperMethods
   def login_to_admin
     @user = Factory.create(:user)
     visit admin_login
-    page.should have_css("h1", :text => "Sign in")
+    page.should have_css("h1", :text => "Admin")
     fill_in("Email", :with => @user.email)
     fill_in("Password", :with => @user.password)
     click_button("Sign in")
