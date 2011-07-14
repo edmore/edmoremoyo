@@ -5,7 +5,7 @@ PersonalBlog::Application.routes.draw do
   # just remember to delete public/index.html.
   # See how all your routes lay out with "rake routes"
 
-  root :to => "home#index"
+  root :to => "posts#overview"
   resource :profile, :only => [:show, :update]
   resource :projects
   resources :posts do
@@ -17,6 +17,7 @@ PersonalBlog::Application.routes.draw do
   resources :contacts
 
   match "blog"  => "posts#overview", :as => "blog"
+  match "about"  => "home#index", :as => "about"
   match "blog/:id"  => "posts#show", :as => "blog_item"
   match "get_in_touch" => "contacts#new" , :as => "get_in_touch"
 
