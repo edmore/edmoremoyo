@@ -9,3 +9,13 @@ $(function(){
  });
 });
 
+$(document).ready(function(){
+        $(".tweet").tweet({
+            username: "etmoyo",
+            avatar_size: 32,
+            count: 1,
+            loading_text: "Loading tweets..."
+        });
+ });
+
+
