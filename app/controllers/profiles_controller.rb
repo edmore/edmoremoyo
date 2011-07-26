@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:index]
   before_filter :load_user
   before_filter :load_profile
 
@@ -12,6 +12,8 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def index
+  end
 
   def show
   end

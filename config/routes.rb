@@ -17,7 +17,7 @@ PersonalBlog::Application.routes.draw do
   resources :contacts
 
   match "blog"  => "posts#overview", :as => "blog"
-  match "about"  => "home#index", :as => "about"
+  match "about"  => "profiles#index", :as => "about"
   match "blog/:id"  => "posts#show", :as => "blog_item"
   match "get_in_touch" => "contacts#new" , :as => "get_in_touch"
 

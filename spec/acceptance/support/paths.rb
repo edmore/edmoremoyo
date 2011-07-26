@@ -5,6 +5,10 @@ module NavigationHelpers
     "/"
   end
 
+  def about
+    "/about"
+  end
+
   def admin_login
     "/admin"
   end
