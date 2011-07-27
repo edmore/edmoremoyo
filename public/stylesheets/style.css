@@ -6,7 +6,7 @@ body{
   background:#FFFFFF;
 }
 
-.projects a, .page_footer p a, .social_links_sidebar a{
+.projects a, .social_links_sidebar a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
   color: #640B00;
@@ -14,6 +14,25 @@ body{
   border-radius: 3px;
   padding: 3px 5px;
   margin-top: 10px;
+}
+
+.page_footer a{
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: Gothic;
+  color: #640B00;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 3px 5px;
+  margin-top: 10px;
+}
+
+.page_footer nav a{
+  text-decoration: none;
+}
+
+.page_footer nav a:hover{
+  background-color: #640B1B;
+  color: #FFFFFF;
 }
 
 .projects a:hover{
@@ -139,18 +158,6 @@ border-top: 2px solid #333333;
 color : #333333;
 }
 
-footer nav  a{
-color : #333333;
-text-decoration :none;
-border-bottom: 1px solid #333333;
-}
-
-footer nav a:hover{
-text-decoration :none;
-border-top: 2px solid #333333;
-color : #333333;
-}
-
 .projects a{
 color : #333333;
 }
@@ -229,7 +236,8 @@ display:inline;
 }
 
 footer nav{
-margin-bottom: 35px;
+margin-bottom: 10px;
+padding-top: 20px;
 }
 
 .about, .projects, .blog, .post{
@@ -271,9 +279,14 @@ div#dsq-account-dropdown { display: none;}
   width: 866px;
 }
 
-footer p, .projects footer{
+.projects footer{
   font-size: 1em;
   font-style:italic;
+  color: #640B00;
+}
+
+footer p{
+  font-size: 0.9em;
   color: #640B00;
 }
 
