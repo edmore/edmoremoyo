@@ -4,6 +4,10 @@ font-size: 0.8em;
 color: #640B1B;
 }
 
+.tweet{
+border-left: 1px dotted #640B1B;
+}
+
 .tweet_list {
 -webkit-border-radius: 0.5em;
 -moz-border-radius: 0.5em;
