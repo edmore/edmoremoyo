@@ -37,4 +37,29 @@ describe Profile do
     end
   end
 
+  describe "#summary_to_html" do
+    it 'should return the profile summary textile text as html' do
+      profile = Factory.create(:profile, :summary => "This is *my* text.")
+      profile.summary_to_html.should == "<p>This is <strong>my</strong> text.</p>"
+    end
+  end
+  describe "#skills_to_html" do
+    it 'should return the profile summary textile text as html' do
+      profile = Factory.create(:profile, :skills => "This is *my* text.")
+      profile.skills_to_html.should == "<p>This is <strong>my</strong> text.</p>"
+    end
+  end
+  describe "#experience_to_html" do
+    it 'should return the profile summary textile text as html' do
+      profile = Factory.create(:profile, :experience => "This is *my* text.")
+      profile.experience_to_html.should == "<p>This is <strong>my</strong> text.</p>"
+    end
+  end
+  describe "#education_to_html" do
+    it 'should return the profile summary textile text as html' do
+      profile = Factory.create(:profile, :education => "This is *my* text.")
+      profile.education_to_html.should == "<p>This is <strong>my</strong> text.</p>"
+    end
+  end
+
 end

@@ -1,28 +1,28 @@
 =render :partial => 'home/site_header'
 
 %section{:class => "about"}
-  %article{:class => "profile"}
+  %article{:class => "summary"}
     %header
       %h2 #summary
-    %p= @profile.summary
+    =raw(@profile.summary_to_html)
     %footer
 
   %article{:class => "skills"}
     %header
       %h2 #skills
-    %p= @profile.skills
+    =raw(@profile.skills_to_html)
     %footer
 
   %article{:class => "education"}
     %header
       %h2 #education
-    %p= @profile.education
+    =raw(@profile.education_to_html)
     %footer
 
   %article{:class => "experience"}
     %header
       %h2 #experience
-    %p= @profile.experience
+    =raw(@profile.experience_to_html)
     %footer
 =render :partial => 'home/site_sidebar'
 =render :partial => 'home/site_footer'

@@ -14,6 +14,26 @@ feature "About Feature", %q{
     visit about
   end
 
+  scenario "I should be able to see my summary" do
+    visit about
+    page.should have_css("article.summary p", :text => "My Summary")
+  end
+
+  scenario "I should be able to see my skills" do
+    visit about
+    page.should have_css("article.skills p", :text => "My Skills")
+  end
+
+  scenario "I should be able to see my education" do
+    visit about
+    page.should have_css("article.education p", :text => "Education")
+  end
+
+  scenario "I should be able to see my experience" do
+    visit about
+    page.should have_css("article.experience p", :text => "My Experience")
+  end
+
   scenario "I should see a link to the projects page" do
     visit homepage
     click_link("Projects")
