@@ -9,4 +9,11 @@ module ApplicationHelper
     Profile::DESCRIPTION.sample
   end
 
+  def page_title
+    title = request.fullpath.split("/").delete_if{|x| x == ""}
+    return "edmore" if title.blank?
+    return "edmore" + " | " + title[0].titleize  unless title[1].present?
+    "edmore" + " | " + title[0].titleize + " : " + title[1].titleize
+  end
+
 end
