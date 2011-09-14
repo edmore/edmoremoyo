@@ -10,7 +10,7 @@ module ApplicationHelper
   end
 
   def page_title
-    title = request.fullpath.split("/").delete_if{|x| x == ""}
+    title = request.fullpath.split("/").reject(&:empty?)
     return "edmore_moyo" if title.blank?
     return "edmore_moyo" + " | " + title[0].titleize  unless title[1].present?
     "edmore_moyo" + " | " + title[0].titleize + " : " + title[1].titleize
