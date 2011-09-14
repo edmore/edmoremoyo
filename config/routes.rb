@@ -7,6 +7,7 @@ PersonalBlog::Application.routes.draw do
 
   root :to => "posts#overview"
   resource :profile, :only => [:show, :update]
+  resource :message, :only => [:show]
   resource :projects
   resources :posts do
     collection do
@@ -20,6 +21,8 @@ PersonalBlog::Application.routes.draw do
   match "about"  => "profiles#index", :as => "about"
   match "blog/:id"  => "posts#show", :as => "blog_item"
   match "get_in_touch" => "contacts#new" , :as => "get_in_touch"
+  match "ithinkilove/:name" => "messages#show" , :as => "ithinkilove"
+  match "ithinkilove" => "messages#show" , :as => "ithinkilove"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
