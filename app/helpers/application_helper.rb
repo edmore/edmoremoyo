@@ -5,4 +5,8 @@ module ApplicationHelper
     end
   end
 
+  def random_description
+    Profile::DESCRIPTION.sample
+  end
+
 end
