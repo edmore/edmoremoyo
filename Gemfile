@@ -37,6 +37,11 @@ group :test, :development do
  gem "steak"
  gem "timecop"
 end
+
+group :production do
+  gem 'pg'
+end
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
