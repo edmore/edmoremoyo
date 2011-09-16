@@ -29,7 +29,7 @@ describe Github do
 
   describe "#last_commit_date" do
     it "should return the last commit date" do
-      @project.last_commit_date.should == '28 June 2011 10:18AM'
+      @project.last_commit_date.should == '28 June 2011 01:18AM'
     end
   end
 

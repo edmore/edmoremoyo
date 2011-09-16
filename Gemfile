@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
- gem 'rails', '3.0.7'
+ gem 'rails', '3.1'
  gem "devise"
  gem "formtastic"
  gem "haml"
@@ -14,7 +14,7 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '0.2.5'
+gem 'mysql2', '>= 0.3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
