@@ -38,6 +38,12 @@ group :test, :development do
  gem "timecop"
 end
 
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
+
+
 # Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
