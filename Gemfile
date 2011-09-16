@@ -5,7 +5,7 @@ source 'http://rubygems.org'
  gem "formtastic"
  gem "haml"
  gem "jquery-rails"
- gem 'rake', '0.8.7'
+ gem 'rake', '0.9.2'
  gem 'disqus'
  gem 'RedCloth'
  gem 'fakeweb'
