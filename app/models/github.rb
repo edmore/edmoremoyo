@@ -56,7 +56,7 @@ class Github
   end
 
   def parsed_json(api_data)
+    return api_data unless api_data["commits"]
     ActiveSupport::JSON.decode(api_data)
   end
-
 end
