@@ -332,10 +332,10 @@ border-radius:5px;
   width: 90%
 }
 
-#contact_submit{
+.commit input{
   width: 100px;
   border: 2px solid #640B00;
-  float:rightright;
+  float: left;
   margin-right:6px;
   -moz-border-radius:8px;
   -webkit-border-radius:8px;
