@@ -16,7 +16,14 @@
       for their commenting application and
       %a{:href => "http://seaofclouds.com", :class => "popup"} Seaofclouds
       for the twitter plugin.
-    %footer= "Last commit : \"#{@message}\""
+    %footer= "Last commit : \"#{@personal_message}\""
+
+  %article{:class => "personal_website"}
+    %header
+      %h3 jFlickery
+    %p jFlickery is a Flickr API wrapper in vanilla JavaScript.
+    %p It is currently under development.
+    %footer= "Last commit : \"#{@flickery_message}\""
 
 =render :partial => 'home/site_sidebar'
 =render :partial => 'home/site_footer'
