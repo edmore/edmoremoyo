@@ -16,4 +16,8 @@ module ApplicationHelper
     "edmore_moyo" + " | " + title[0].titleize + " : " + title[1].titleize
   end
 
+  def copyright_year
+    Time.current.year
+  end
+
 end
