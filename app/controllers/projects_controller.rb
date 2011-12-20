@@ -9,6 +9,9 @@ class ProjectsController < ApplicationController
 
     matterhorn = Github.new("edmore", "Matterhorn", "master")
     @matterhorn_message = matterhorn.last_commit_message
+
+    sakai = Github.new("edmore", "Sakai", "master")
+    @sakai_message = sakai.last_commit_message
   end
 
 end
