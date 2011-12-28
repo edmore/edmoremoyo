@@ -6,7 +6,6 @@ class ProjectsController < ApplicationController
 
     flickery = Github.new("edmore", "jFlickery", "master")
     @flickery_message = flickery.last_commit_message
-    @flickery_url = flickery.last_commit_url
 
     matterhorn = Github.new("edmore", "Matterhorn", "master")
     @matterhorn_message = matterhorn.last_commit_message
