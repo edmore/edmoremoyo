@@ -379,6 +379,8 @@ padding:3px;
 
 .projects header > a{
   float : right;
+  color: #640B00;
+  font-weight:bold;
 }
 
 .projects header > h3{
@@ -393,3 +395,14 @@ padding:3px;
   border-top: transparent;
 }
 
+.projects article:nth-child(odd) {
+  border: 1px dotted #CCC;
+  border-radius: 3px;
+  padding:2px;
+}
+
+.projects article:nth-child(even) {
+  border: 1px dotted #640B00;
+  border-radius: 3px;
+  padding:2px;
+}
