@@ -12,6 +12,9 @@ class ProjectsController < ApplicationController
 
     sakai = Github.new("edmore", "Sakai", "master")
     @sakai_message = sakai.last_commit_message
+
+    dexter = Github.new("edmore", "dexter", "master")
+    @dexter_message = dexter.last_commit_message
   end
 
 end
