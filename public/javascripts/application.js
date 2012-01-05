@@ -15,7 +15,7 @@ $(function(){
 
    $(".projects header > a").click(function(){
        var content = $(this).closest('header').parent().find('p');
-       content.is(':hidden') ? content.show() : content.hide();
+       content.toggle();
    });
 
    // Open poups on a separate page
