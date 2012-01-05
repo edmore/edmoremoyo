@@ -18,7 +18,7 @@ $(function(){
        content.toggle('slow');
    });
 
-   // Open poups on a separate page
+   // Open popups on a separate page
     $(".popup" ).click(function(event){
         event.preventDefault();
         var href = $(this).attr("href");
