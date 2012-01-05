@@ -372,3 +372,23 @@ padding:3px;
   font-size: 0.6em;
 }
 
+.hidden_content{
+  display: none;
+}
+
+.projects header > a{
+  float : right;
+}
+
+.projects header > h3{
+  float : left;
+}
+
+.projects article > p{
+  clear: both;
+}
+
+.projects article{
+  border-top: transparent;
+}
+

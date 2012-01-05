@@ -2,20 +2,32 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(function(){
-  $(".popup" ).click(function(event){
- event.preventDefault();
- var href = $(this).attr("href");
- var popup = window.open (href,"");
- });
-});
-
-$(document).ready(function(){
-        $(".tweet").tweet({
+    // Twitter plugin
+    $(".tweet").tweet({
             username: "etmoyo",
             avatar_size: 32,
             count: 1,
             loading_text: "Loading tweets..."
         });
+
+   // Projects page - project information
+   $(".projects article > p").addClass("hidden_content");
+
+   $(".projects header > a").click(function(){
+       var content = $(this).closest('header').parent().find('p');
+       content.is(':hidden') ? content.show() : content.hide();
+   });
+
+   // Open poups on a separate page
+    $(".popup" ).click(function(event){
+        event.preventDefault();
+        var href = $(this).attr("href");
+        var popup = window.open (href,"");
+    });
+
  });
+
+
+
 
 
