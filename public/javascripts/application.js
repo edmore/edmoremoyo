@@ -11,7 +11,7 @@ $(function(){
         });
 
    // Projects page - project information
-   $(".projects article > p").addClass("hidden_content");
+   $(".projects article > p").hide();
 
    $(".projects header > a").click(function(){
        var content$ = $(this).closest('header').parent().find('p');
