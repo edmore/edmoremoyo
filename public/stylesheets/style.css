@@ -373,10 +373,6 @@ padding:3px;
   font-size: 0.6em;
 }
 
-.hidden_content{
-  display: none;
-}
-
 .projects header > a{
   float : right;
   color: #640B00;
