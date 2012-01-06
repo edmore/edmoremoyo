@@ -15,7 +15,7 @@ $(function(){
 
    $(".projects header > a").click(function(){
        var content$ = $(this).closest('header').parent().find('p');
-       content$.toggle('slow', function(){
+       content$.toggle('fast', function(){
            var link$ = $(this).parent().find('header').find('a');
            $(this).is(':hidden') ? link$.text("[+]") : link$.text("[-]");
        });
