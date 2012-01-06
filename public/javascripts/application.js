@@ -14,15 +14,18 @@ $(function(){
    $(".projects article > p").addClass("hidden_content");
 
    $(".projects header > a").click(function(){
-       var content = $(this).closest('header').parent().find('p');
-       content.toggle('slow');
+       var content$ = $(this).closest('header').parent().find('p');
+       content$.toggle('slow', function(){
+           var link$ = $(this).parent().find('header').find('a');
+           $(this).is(':hidden') ? link$.text("[+]") : link$.text("[-]");
+       });
    });
 
    // Open popups on a separate page
     $(".popup" ).click(function(event){
         event.preventDefault();
-        var href = $(this).attr("href");
-        var popup = window.open (href,"");
+        var href = $(this).attr("href"),
+            popup = window.open (href,"");
     });
 
  });
