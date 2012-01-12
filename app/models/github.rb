@@ -23,26 +23,27 @@ class Github
   end
 
   def last_commit_message
-    output = parsed_json(list_commits)
-    output["commits"] ? output["commits"][0]["message"] : output
+    with_commits_list { |o| o["commits"] ? o["commits"][0]["message"] : o }
   end
 
   def last_commit_date
-    output = parsed_json(list_commits)
-    output["commits"] ? DateTime.parse(output["commits"][0]["committed_date"]).strftime("%d %B %Y %I:%M%p") : output
+    with_commits_list { |o| o["commits"] ? DateTime.parse(o["commits"][0]["committed_date"]).strftime("%d %B %Y %I:%M%p") : o }
   end
 
   def last_commit_url
-    output = parsed_json(list_commits)
-    output["commits"] ? output["commits"][0]["url"] : output
+    with_commits_list { |o| o["commits"] ? o["commits"][0]["url"] : o }
   end
 
   def last_committer
-    output = parsed_json(list_commits)
-    output["commits"] ? output["commits"][0]["committer"]["name"] : output
+    with_commits_list { |o| o["commits"] ? o["commits"][0]["committer"]["name"] : o }
   end
 
   private
+  def with_commits_list
+    o = parsed_json(list_commits)
+    yield o
+  end
+  
   def open_api(url)
     begin
       open(url).read
