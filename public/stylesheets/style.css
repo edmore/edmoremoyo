@@ -397,11 +397,12 @@ padding:3px;
 }
 
 article.blogs{
-clear : both;
+overflow: hidden;
 }
 
 article.blogs header{
 float:left;
+margin-top: 5px;
 }
 
 article.blogs footer{
