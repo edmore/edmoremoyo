@@ -190,7 +190,6 @@ h2{
   text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
 }
 
-
 .post h2{
 margin-bottom: 1px;
 }
@@ -207,8 +206,6 @@ h3{
   text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
   margin: 4px;
 }
-
-
 
 .page_header nav ul{
 text-shadow: 0 1px 0 #f5f5f5;
@@ -399,4 +396,15 @@ padding:3px;
   padding:2px;
 }
 
+article.blogs{
+clear : both;
+}
 
+article.blogs header{
+float:left;
+}
+
+article.blogs footer{
+float:right;
+margin-top: 5px;
+}
