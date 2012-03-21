@@ -1,7 +1,7 @@
 module HelperMethods
   # Put helper methods you need to be available in all tests here.
   def login_to_admin
-    @user = Factory.create(:user)
+    @user = FactoryGirl.create(:user)
     visit admin_login
     page.should have_css("h1", :text => "Admin")
     fill_in("Email", :with => @user.email)

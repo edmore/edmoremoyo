@@ -17,8 +17,8 @@ feature "Contact Feature", %q{
   end
 
   scenario "viewing an index of contact information" do
-    contact1 = Factory.create(:contact)
-    contact2 = Factory.create(:contact)
+    contact1 = FactoryGirl.create(:contact)
+    contact2 = FactoryGirl.create(:contact)
     login_to_admin
     click_link("Contact Info")
     should_have_table('table.entries tbody',[
@@ -28,8 +28,8 @@ feature "Contact Feature", %q{
   end
 
   scenario "viewing particular contact info " do
-    contact1 = Factory.create(:contact, :created_at => 1.day.ago, :name => "bonnie")
-    contact2 = Factory.create(:contact, :name => "clyde")
+    contact1 = FactoryGirl.create(:contact, :created_at => 1.day.ago, :name => "bonnie")
+    contact2 = FactoryGirl.create(:contact, :name => "clyde")
     login_to_admin
     click_link("Contact Info")
     within('.entries tbody tr:nth-child(2)') do

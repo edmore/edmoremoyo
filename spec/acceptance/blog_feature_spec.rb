@@ -13,8 +13,8 @@ feature "Blog Feature", %q{
   end
 
   scenario "I should see a blog overview page" do
-    post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
-    post2 = Factory.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
+    post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
+    post2 = FactoryGirl.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
 
     visit thoughts_in_bits
     page.should have_css("h2", :text => "blog_index")
@@ -23,8 +23,8 @@ feature "Blog Feature", %q{
   end
 
   scenario "I should see a particular blog post" do
-    post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
-    post2 = Factory.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
+    post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
+    post2 = FactoryGirl.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
     visit thoughts_in_bits
     click_link("The test blog")
     page.should have_css("h2", :text => "The test blog")
@@ -33,8 +33,8 @@ feature "Blog Feature", %q{
   end
 
   scenario "viewing an index of blog posts" do
-    post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
-    post2 = Factory.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
+    post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
+    post2 = FactoryGirl.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
 
     login_to_admin
     click_link("Blogs")
@@ -48,7 +48,7 @@ feature "Blog Feature", %q{
   end
 
   scenario "navigating back to blog index" do
-    post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
+    post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
     visit thoughts_in_bits
     click_link("The test blog")
     current_path.should == "/blog/#{post1.title.parameterize}"
@@ -70,8 +70,8 @@ feature "Blog Feature", %q{
   end
 
   scenario "editing a post" do
-    post1 = Factory.create(:post, :title => "The test blog", :body => "The blog body")
-    post2 = Factory.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
+    post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
+    post2 = FactoryGirl.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
     login_to_admin
     visit posts_index
     within(".entries tbody tr:nth-child(2)") do

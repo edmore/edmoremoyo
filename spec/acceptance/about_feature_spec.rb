@@ -7,7 +7,7 @@ feature "About Feature", %q{
 } do
 
   before(:each) do
-    @profile = Factory.create(:profile)
+    @profile = FactoryGirl.create(:profile)
   end
 
   scenario "I should see an about page" do

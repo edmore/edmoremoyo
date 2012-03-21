@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Profile do
   before(:each) do
-    @profile = Factory.create(:profile)
+    @profile = FactoryGirl.create(:profile)
   end
 
   describe "#summary" do
@@ -39,25 +39,25 @@ describe Profile do
 
   describe "#summary_to_html" do
     it 'should return the profile summary textile text as html' do
-      profile = Factory.create(:profile, :summary => "This is *my* text.")
+      profile = FactoryGirl.create(:profile, :summary => "This is *my* text.")
       profile.summary_to_html.should == "<p>This is <strong>my</strong> text.</p>"
     end
   end
   describe "#skills_to_html" do
     it 'should return the profile summary textile text as html' do
-      profile = Factory.create(:profile, :skills => "This is *my* text.")
+      profile = FactoryGirl.create(:profile, :skills => "This is *my* text.")
       profile.skills_to_html.should == "<p>This is <strong>my</strong> text.</p>"
     end
   end
   describe "#experience_to_html" do
     it 'should return the profile summary textile text as html' do
-      profile = Factory.create(:profile, :experience => "This is *my* text.")
+      profile = FactoryGirl.create(:profile, :experience => "This is *my* text.")
       profile.experience_to_html.should == "<p>This is <strong>my</strong> text.</p>"
     end
   end
   describe "#education_to_html" do
     it 'should return the profile summary textile text as html' do
-      profile = Factory.create(:profile, :education => "This is *my* text.")
+      profile = FactoryGirl.create(:profile, :education => "This is *my* text.")
       profile.education_to_html.should == "<p>This is <strong>my</strong> text.</p>"
     end
   end

@@ -7,7 +7,7 @@ feature "Admin Feature", %q{
 } do
 
   before(:each) do
-    @user = Factory.create(:user)
+    @user = FactoryGirl.create(:user)
   end
 
   scenario "successfully logging in to the admin" do
@@ -20,7 +20,7 @@ feature "Admin Feature", %q{
   end
 
   scenario "Updating the website profile" do
-    profile = Factory.create(:profile)
+    profile = FactoryGirl.create(:profile)
 
     login_to_admin
     click_link("Profile")
@@ -36,7 +36,7 @@ feature "Admin Feature", %q{
   end
 
   scenario "display error if the profile fields are empty" do
-    profile = Factory.create(:profile)
+    profile = FactoryGirl.create(:profile)
 
     login_to_admin
     click_link("Profile")
