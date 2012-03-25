@@ -70,6 +70,7 @@ body{
   color: #FFFFFF;
 }
 
+
 .post h2{
 font-size: 1.2em;
 float: left;
@@ -409,3 +410,9 @@ article.blogs footer{
 float:right;
 margin-top: 5px;
 }
+
+.blogs header > h3{
+border-left : 6px solid #640B00;
+padding: 0.2em;
+}
+

@@ -8,7 +8,6 @@
       %article{:id => "blog_#{post.id}", :class => "blogs"}
         %header
           %h3
-            = ">"
             =link_to  post.title, blog_item_path(post)
         %footer= post.date_to_readable
   -else
