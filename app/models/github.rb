@@ -1,13 +1,18 @@
 class Github
   require 'open-uri'
 
-  attr_accessor :user_id, :repo, :branch, :api
+  @api_url = "http://github.com/api/v2/json"
+  attr_accessor :user_id, :repo, :branch
 
-  def initialize(user, repo, branch, api = "http://github.com/api/v2/json")
+  class << self
+  	  attr_accessor :api_url
+  end
+
+  def initialize(user, repo, branch)
     @user_id = user
     @repo = repo
     @branch = branch
-    @api = api
+    @api = Github.api_url
   end
 
   def list_commits
