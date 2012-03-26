@@ -5,7 +5,7 @@ class Github
   attr_accessor :user_id, :repo, :branch
 
   class << self
-  	  attr_accessor :api_url
+    attr_accessor :api_url
   end
 
   def initialize(user, repo, branch)
