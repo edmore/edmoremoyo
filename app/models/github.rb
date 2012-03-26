@@ -2,11 +2,12 @@ class Github
   require 'open-uri'
 
   @api_url = "http://github.com/api/v2/json"
-  attr_accessor :user_id, :repo, :branch
-
+  
   class << self
     attr_accessor :api_url
   end
+
+  attr_accessor :user_id, :repo, :branch
 
   def initialize(user, repo, branch)
     @user_id = user
@@ -32,7 +33,9 @@ class Github
   end
 
   def last_commit_date
-    with_commits_list { |o| o["commits"] ? DateTime.parse(o["commits"][0]["committed_date"]).strftime("%d %B %Y %I:%M%p") : o }
+    with_commits_list do |o|
+      o["commits"] ? DateTime.parse(o["commits"][0]["committed_date"]).strftime("%d %B %Y %I:%M%p") : o
+    end
   end
 
   def last_commit_url
