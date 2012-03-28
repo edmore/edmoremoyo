@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Github do
 
   before(:each) do
-    @project = Github.new("user", "repo", "branch")
+    @project = Github::Commit.new("user", "repo", "branch")
     @project.stub(:open_api).with("#{Github.api_url}/commits/list/#{@project.user_id}/#{@project.repo}/#{@project.branch}").and_return("{\"commits\":[{\"parents\":[{\"id\":\"3ed85a545cfa9ea25595925103c1af077e25274e\"}],\"author\":{\"name\":\"Edmore  Moyo\",\"login\":\"edmore\",\"email\":\"etmoyo@test.com\"},\"url\":\"/edmore/edmoremoyo/commit/1f78ea9669f9910829046d925a9d02757ea36522\",\"id\":\"1f78ea9669f9910829046d925a9d02757ea36522\",\"committed_date\":\"2011-06-28T01:18:03-07:00\",\"authored_date\":\"2011-06-28T01:18:03-07:00\",\"message\":\"More refactoring of Github API wrapper class\",\"tree\":\"002f5de7e919865670b64a4548954990a9c38b9e\",\"committer\":{\"name\":\"Edmore Moyo\",\"login\":\"edmore\",\"email\":\"etmoyo@test.com\"}}]}")
   end
 
@@ -13,7 +13,7 @@ describe Github do
     end
 
     it "should display a message when something goes wrong" do
-      project = Github.new("user", "repo", "branch")
+      project = Github::Commit.new("user", "repo", "branch")
 
       project.stub(:open_api).with("#{Github.api_url}/commits/list/#{@project.user_id}/#{@project.repo}/#{@project.branch}").and_return("Oops!!, some http issues, sorry.")
 
