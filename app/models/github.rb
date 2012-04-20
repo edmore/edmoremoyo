@@ -49,7 +49,7 @@ module Github
     private
     def with_commits_list
       o = parsed_json(list_commits)
-      yield o
+      yield ( o ) if block_given?
     end
 
     def open_api(url)
