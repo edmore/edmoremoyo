@@ -7,25 +7,25 @@ module Github
   end
 
   class Commit
-    attr_accessor :user_id, :repo, :branch
+    attr_accessor :user, :repo, :branch
 
-    def initialize(user, repo, branch)
-      @user_id = user
-      @repo = repo
-      @branch = branch
+    def initialize( hash )
+      hash.each do |key,value|
+        instance_variable_set( "@#{key}", value )
+      end
       @api = Github.api_url
     end
 
     def list_commits
-      open_api("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}")
+      open_api("#{@api}/commits/list/#{@user}/#{@repo}/#{@branch}")
     end
 
     def commits_on_file(file_name)
-      open_api("#{@api}/commits/list/#{@user_id}/#{@repo}/#{@branch}/#{file_name}")
+      open_api("#{@api}/commits/list/#{@user}/#{@repo}/#{@branch}/#{file_name}")
     end
 
     def commit(commit_id)
-      open_api("#{@api}/commits/show/#{@user_id}/#{@repo}/#{commit_id}")
+      open_api("#{@api}/commits/show/#{@user}/#{@repo}/#{commit_id}")
     end
 
     def last_commit_message
