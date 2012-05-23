@@ -20,4 +20,9 @@ module ApplicationHelper
     Time.current.year
   end
 
+  def with_project(options = {})
+    options.reverse_merge! :user => "edmore", :branch => "master"
+    g = Github::Commit.new(options)
+    yield (g) if block_given?
+  end
 end
