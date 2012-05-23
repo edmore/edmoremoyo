@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def show
-    @personal_message = with_project(:repo => "edmoremoyo") {|g| g.last_commit_message }
+    @personal_message = with_project {|g| g.last_commit_message }
     @flickery_message = with_project(:repo => "jFlickery") {|g| g.last_commit_message }
     @matterhorn_message = with_project(:repo => "Matterhorn") {|g| g.last_commit_message }
     @sakai_message = with_project(:repo => "Sakai") {|g| g.last_commit_message }
