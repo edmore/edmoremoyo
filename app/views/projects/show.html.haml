@@ -42,5 +42,12 @@
       %a [+]
     %p dexter is a simple HTML5 canvas experiment. It will form the basis for my HTML5 Canvas library animation.js.
 
+  %article{:class => "peekaboo"}
+    %header
+      %h3 peekaboo
+      %a [+]
+    %p peekaboo is a toy application for exploring the wonders of redis and text to speech synthesis.
+    %footer= "Last commit : \"#{@peekaboo_message}\""
+
 =render :partial => 'home/site_sidebar'
 =render :partial => 'home/site_footer'
