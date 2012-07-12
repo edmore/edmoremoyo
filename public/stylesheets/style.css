@@ -97,7 +97,7 @@ float: left;
 clear:both;
 }
 
-.post, .summary, .skills, .education, .experience p a{
+.post p a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
   font-size: 1em;
@@ -107,7 +107,7 @@ clear:both;
   padding: 3px 5px;
 }
 
-.post, .summary, .skills, .education, .experience p a:hover{
+.post p a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
 }
