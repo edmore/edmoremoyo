@@ -3,7 +3,7 @@ class Profile < ActiveRecord::Base
 
   DESCRIPTION = ["The Official Web Footprint",
                  "Computer Scientist, Husband, Father and Son",
-                 "Ruby, JavaScript and Erlang Enthusiast"
+                 "Ruby, JavaScript, Scheme and Erlang Enthusiast"
   ]
 
   def summary_to_html
