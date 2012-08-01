@@ -97,6 +97,14 @@ float: left;
 clear:both;
 }
 
+.post p::selection{
+  background: #640B00;
+}
+
+.post p::moz-selection{
+  background: #640B00;
+}
+
 .post p a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
