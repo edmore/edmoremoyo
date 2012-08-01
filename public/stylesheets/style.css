@@ -98,11 +98,11 @@ clear:both;
 }
 
 .post p::selection{
-  background: #640B00;
+  background: yellow;
 }
 
-.post p::moz-selection{
-  background: #640B00;
+.post p::-moz-selection{
+  background: yellow;
 }
 
 .post p a{
