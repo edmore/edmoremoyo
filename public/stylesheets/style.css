@@ -409,10 +409,11 @@ margin-top: 5px;
 article.blogs footer{
 float:right;
 margin-top: 5px;
-background-color: #000;
+background-color: rgba(0, 0, 0, 0.05);
 padding: 4px;
-color: #FFF;
+color: black;
 font-weight: bold;
+
 }
 
 .blogs header > h3{
