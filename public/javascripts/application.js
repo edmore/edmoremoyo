@@ -28,6 +28,12 @@ $(function(){
             popup = window.open (href,"");
     });
 
+    // Ensure that the top level links indicate page one is on
+    if(window.location.pathname === "/"){
+        $("a[href='/blog']").css("border-top", "2px solid #333");
+    }else{
+        $("a[href='"+ location.pathname +"']").css("border-top", "2px solid #333");
+    }
  });
 
 
