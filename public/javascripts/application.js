@@ -30,7 +30,7 @@ $(function(){
 
     // Ensure that the top level links indicate page one is on
     if(window.location.pathname !== "/"){
-        $("a[href='"+ location.pathname +"']").css("border-top", "2px solid #333");
+        $("a[href='"+ window.location.pathname +"']").css("border-top", "2px solid #333");
     }
  });
 
