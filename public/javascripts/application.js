@@ -2,6 +2,19 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(function(){
+    // Randomize profile description
+    var description = ["The Official Web Footprint",
+                       "Computer Scientist, Husband, Father and Son",
+                       "Ruby, JavaScript, Scheme and Erlang Enthusiast"
+                       ]; 
+    var randomizer = function(){
+        var random_number = Math.floor(Math.random() * description.length),
+            random_description = description[random_number];       
+        $(".page_header > p").text(random_description);
+        };
+
+    randomizer();
+
     // Twitter plugin
     $(".tweet").tweet({
             username: "etmoyo",
@@ -22,7 +35,7 @@ $(function(){
    });
 
    // Open popups on a separate page
-    $(".popup" ).click(function(event){
+    $(".popup").click(function(event){
         event.preventDefault();
         var href = $(this).attr("href"),
             popup = window.open (href,"");
@@ -33,8 +46,3 @@ $(function(){
         $("a[href='"+ window.location.pathname +"']").css("border-top", "2px solid #333");
     }
  });
-
-
-
-
-

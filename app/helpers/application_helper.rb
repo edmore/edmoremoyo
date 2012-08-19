@@ -5,10 +5,6 @@ module ApplicationHelper
     end
   end
 
-  def random_description
-    Profile::DESCRIPTION.sample
-  end
-
   def page_title
     title = request.fullpath.split("/").reject(&:empty?)
     return "edmore_moyo" if title.blank?

@@ -1,11 +1,6 @@
 class Profile < ActiveRecord::Base
   validates_presence_of :summary, :skills, :experience, :education
 
-  DESCRIPTION = ["The Official Web Footprint",
-                 "Computer Scientist, Husband, Father and Son",
-                 "Ruby, JavaScript, Scheme and Erlang Enthusiast"
-  ]
-
   def summary_to_html
     RedCloth.new(summary).to_html
   end
