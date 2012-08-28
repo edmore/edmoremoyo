@@ -2,57 +2,45 @@
 
 %section{:class => "projects"}
   %h2 #projects
+  %div
+    %ul
+      %li{:id => "edmoremoyo.com"}
+        %a{:class => "popup", :href => "https://github.com/edmore/edmoremoyo"}
+          %span{:class => "preview"}
+            %img{:src => "/images/edmore_preview.png"}
+            %span{:class => "title"} edmoremoyo
+          %span{:class => "description"} View Project >>
+      %li{:id => "thandazilemoyo.com"}
+        %a{:class => "popup", :href => "https://github.com/edmore/thandazilemoyo"}
+          %span{:class => "preview"}
+            %img{:src => "/images/thandazile_preview.png"}
+            %span{:class => "title"} thandazilemoyo
+          %span{:class => "description"} View Project >>
+      %li{:id => "matterhorn"}
+        %a{:class => "popup", :href => "https://github.com/edmore/Matterhorn"}
+          %span{:class => "preview"}
+            %img{:src => "/images/matterhorn_preview.png"}
+            %span{:class => "title"} matterhorn
+          %span{:class => "description"} View Project >>
+      %li{:id => "peekaboo"}
+        %a{:class => "popup", :href => "https://github.com/edmore/peekaboo"}
+          %span{:class => "preview"}
+            %img{:src => "/images/peekaboo_preview.png"}
+            %span{:class => "title"} peekaboo
+          %span{:class => "description"} View Project >>
+      %li{:id => "jFlickery"}
+        %a{:class => "popup", :href => "https://github.com/edmore/jFlickery"}
+          %span{:class => "preview"}
+            %img{:src => "/images/jflickery_preview.png"}
+            %span{:class => "title"} jFlickery
+          %span{:class => "description"} View Project >>
+      %li{:id => "dexter"}
+        %a{:class => "popup", :href => "https://github.com/edmore/dexter"}
+          %span{:class => "preview"}
+            %img{:src => "/images/dexter_preview.png"}
+            %span{:class => "title"} dexter
+          %span{:class => "description"} View Project >>
 
-  %article{:class => "personal_website"}
-    %header
-      %h3 @edmore_moyo
-      %a [+]
-    %p This site is crafted in Ruby, Rails, JavaScript, jQuery, HTML5, HAML and CSS3. I am using RSpec, Steak and Capybara for testing.
-    %p The site is currently optimized for Webkit browsers(Chrome and Safari), Firefox and Opera. No full IE optimization as yet.
-    %p
-      A special thanks to the guy at
-      %a{ :href => "http://www.komodomedia.com", :class => "popup"} Komodo Media
-      for the superb social media icons,
-      %a{:href => "http://www.disqus.com", :class => "popup"} Disqus
-      for their commenting application and
-      %a{:href => "http://seaofclouds.com", :class => "popup"} Seaofclouds
-      for the twitter plugin.
-    %footer
-
-  %article{:class => "jFlickery"}
-    %header
-      %h3 jFlickery
-      %a [+]
-    %p jFlickery is a Flickr API wrapper in vanilla JavaScript. Currently it covers PhotoSets - getList (listing of photosets) and getPhotos (photos from a particular photoset).
-    %footer
-
-  %article{:class => "matterhorn"}
-    %header
-      %h3 Matterhorn
-      %a [+]
-    %p Matterhorn is a Free, Open Source project for Lecture Capture & Video Management for Education. It is licensed under a Creative Commons Attribution 3.0 United States License and the source is available under Educational Community License 2.0. I am a committer on this project.
-    %footer
-
-  %article{:class => "sakai"}
-    %header
-      %h3 Sakai
-      %a [+]
-    %p Sakai is a vibrant community creating technology that enhances teaching, learning and research. It is a community of educators collaborating to create open software.
-    %footer
-
-  %article{:class => "dexter"}
-    %header
-      %h3 dexter
-      %a [+]
-    %p dexter is a simple HTML5 canvas experiment. It will form the basis for my HTML5 Canvas library animation.js.
-    %footer
-
-  %article{:class => "peekaboo"}
-    %header
-      %h3 peekaboo
-      %a [+]
-    %p peekaboo is a toy application for exploring the wonders of redis and text to speech synthesis.
-    %footer
 
 =render :partial => 'home/site_sidebar'
 =render :partial => 'home/site_footer'

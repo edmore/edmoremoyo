@@ -45,4 +45,14 @@ $(function(){
     if(window.location.pathname !== "/"){
         $("a[href='"+ window.location.pathname +"']").css("border-top", "2px solid #333");
     }
+
+    // On load hide the description on the projects page
+    $(".description").hide();
+
+    // Show the description on hover
+    $(".projects li").each(function(){
+    $(this).hover(function(){
+       $(this).find(".description").toggle();
+      })
+     });
  });
