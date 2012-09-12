@@ -98,7 +98,7 @@ clear:both;
 }
 
 .post p::selection{
-  background: yellow;
+  background: #DADACA;
 }
 
 .post p::-moz-selection{
