@@ -42,6 +42,7 @@ body{
 
 .social_links_sidebar img{
   margin-bottom: -2px;
+  opacity: 0.8;
 }
 
 .social_links_sidebar a:hover{
