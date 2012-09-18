@@ -5,7 +5,7 @@ $(function(){
     // Randomize profile description
     var description = ["The Official Web Footprint",
                        "Computer Scientist, Husband, Father and Son",
-                       "Ruby, JavaScript, Scheme and Erlang Enthusiast"
+                       "Ruby, JavaScript, Lisp and Erlang Enthusiast"
                        ]; 
     var randomizer = function(){
         var random_number = Math.floor(Math.random() * description.length),
