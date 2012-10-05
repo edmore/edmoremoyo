@@ -5,11 +5,12 @@ $(function(){
     // Randomize profile description
     var description = ["The Official Web Footprint",
                        "Computer Scientist, Husband and Father",
-                       "Ruby, JavaScript, Lisp and Erlang Enthusiast"
-                       ]; 
+                       "Ruby, JavaScript, Lisp and Erlang Enthusiast",
+		       "Est. 1982"
+                       ];
     var randomizer = function(){
         var random_number = Math.floor(Math.random() * description.length),
-            random_description = description[random_number];       
+            random_description = description[random_number];
         $(".page_header > p").text(random_description);
         };
 
