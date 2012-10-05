@@ -366,6 +366,11 @@ border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
 border-bottom-color: #640B00;
 }
 
+.about p a:hover{
+border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+border-bottom-color: #640B00;
+}
+
 .about h2{
 color: #FFFFFF;
 background-color: #640B00;
