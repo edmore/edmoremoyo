@@ -367,6 +367,7 @@ border-bottom-color: #640B00;
 }
 
 .about p a:hover{
+color: #640B00;
 border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 border-bottom-color: #640B00;
 }
