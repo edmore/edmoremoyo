@@ -56,4 +56,15 @@ $(function(){
        $(this).find(".description").toggle();
       })
      });
- });
+
+    // Transform the h3 tags for all the blog links
+    $("article.blogs > header").each(function(){
+	// get random number between -2 and 2
+	var rotation = Math.floor(Math.random() * (2 + 2 + 1)) -2,
+        i = 0;
+        browsers = ["-o-", "-moz-", "-webkit-",""];
+        for(i=0; i < browsers.length; i+=1){
+	    $(this).css(browsers[i] + "transform", "rotate(" + rotation +"deg)");
+        }
+    });
+});
