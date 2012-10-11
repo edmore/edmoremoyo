@@ -45,6 +45,14 @@ body{
   opacity: 0.8;
 }
 
+.social_links_sidebar img:nth-child(1):hover{
+-webkit-backface-visibility: hidden;
+-webkit-transform: scale(1.02) rotate(8deg);
+-moz-transform: scale(1.02) rotate(8deg);
+-o-transform: scale(1.02) rotate(8deg);
+transform: scale(1.02) rotate(8deg);
+}
+
 .social_links_sidebar a:hover{
   background-color: #640B1B;
   color: #FFFFFF;
