@@ -57,7 +57,7 @@ $(function(){
       })
      });
 
-    // Transform the h3 tags for all the blog links
+    // Transform the header tags for all the blog links
     $("article.blogs > header").each(function(){
 	// get random number between -2 and 2
 	var rotation = Math.floor(Math.random() * (2 + 2 + 1)) -2,
