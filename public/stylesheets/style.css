@@ -45,7 +45,7 @@ body{
   opacity: 0.8;
 }
 
-.social_links_sidebar img:nth-child(1):hover{
+.social_links_sidebar img:hover{
 -webkit-backface-visibility: hidden;
 -webkit-transform: scale(1.02) rotate(8deg);
 -moz-transform: scale(1.02) rotate(8deg);
