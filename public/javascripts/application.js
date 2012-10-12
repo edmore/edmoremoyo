@@ -69,5 +69,5 @@ $(function(){
       })
      });
 
-    transfoglify("article > header", -2, 2);
+    transfoglify("article.blogs > header", -2, 2);
 });
