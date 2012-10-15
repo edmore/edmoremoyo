@@ -12,7 +12,7 @@ $(function(){
         var random_number = Math.floor(Math.random() * description.length),
             random_description = description[random_number];
         $(".page_header > p").text(random_description);
-        };
+    };
 
     // Transform group of selectors
     var transfoglify = function(selector, min, max){
@@ -56,7 +56,7 @@ $(function(){
 
     // Ensure that the top level links indicate page one is on
     if(window.location.pathname !== "/"){
-        $("a[href='"+ window.location.pathname +"']").css("border-top", "2px solid #333");
+        $("a[href='"+ window.location.pathname +"']").css("border-top", "2px solid #640B00");
     }
 
     // On load hide the description on the projects page
