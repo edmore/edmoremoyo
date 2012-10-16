@@ -63,11 +63,13 @@ $(function(){
     $(".description").hide();
 
     // Show the description on hover
-    $(".projects li").each(function(){
-    $(this).hover(function(){
-       $(this).find(".description").toggle();
-      })
-     });
+    $(".projects li").mouseover(function(){
+	$(this).children().find("img").css("opacity", 0.9);
+	$(this).children().find(".description").show();
+    }).mouseout(function(){
+	$(this).children().find("img").css("opacity", 1);
+	$(this).children().find(".description").hide();
+    });
 
     transfoglify("article.blogs > header", -2, 2);
    $(".posts blockquote").css({"border-left" : "5px solid #DDD", "padding-left" : 10});
