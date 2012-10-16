@@ -119,7 +119,7 @@ clear:both;
 }
 
 .post p::-moz-selection{
-  background: yellow;
+  background: #DADACA;
 }
 
 .post p a{
