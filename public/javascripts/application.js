@@ -5,7 +5,7 @@ $(function(){
     // Randomize profile description
     var description = ["The Official Web Footprint",
                        "Computer Scientist, Husband and Father",
-                       "Ruby, JavaScript, Lisp and Erlang Enthusiast",
+                       "Ruby, JavaScript and Lisp Enthusiast",
 		       "Est. 1982"
                        ];
     var randomizer = function(){
