@@ -3,25 +3,25 @@
 %section{:class => "about"}
   %article{:class => "summary"}
     %header
-      %h2 #summary
+      %h2 #in_a_few_words
     =raw(@profile.summary_to_html)
     %footer
 
   %article{:class => "skills"}
     %header
-      %h2 #skills
+      %h2 #bragging_rights
     =raw(@profile.skills_to_html)
     %footer
 
   %article{:class => "education"}
     %header
-      %h2 #education
+      %h2 #self_taught?
     =raw(@profile.education_to_html)
     %footer
 
   %article{:class => "experience"}
     %header
-      %h2 #experience
+      %h2 #the_road_thus_far
     =raw(@profile.experience_to_html)
     %footer
 =render :partial => 'home/site_sidebar'
