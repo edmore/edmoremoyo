@@ -72,5 +72,7 @@ $(function(){
     });
 
     transfoglify("article.blogs > header", -2, 2);
+    transfoglify(".about header", -2, 0);
+
    $(".posts blockquote").css({"border-left" : "5px solid #DDD", "padding-left" : 10});
 });
