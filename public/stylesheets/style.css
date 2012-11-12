@@ -530,10 +530,16 @@ display: block;
     }
 
     .page_footer {
-        display: none;
+        display:none;
     }
 
     article.blogs footer {
+        margin-bottom: 9px;
+        clear: both;
         float: left;
+    }
+
+    .blog a {
+        font-size: 1.0em;
     }
 }
