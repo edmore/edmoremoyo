@@ -569,4 +569,8 @@ display: block;
    .posts {
       width: 40%;
    }
+
+   .posts img{
+      max-width: 240px;
+   }
 }
