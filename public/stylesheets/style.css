@@ -517,6 +517,14 @@ display: block;
         display: none;
     }
 
+    .blog a {
+        font-size: 1.0em;
+    }
+
+    .page_header a {
+        font-size: 1.0em;
+    }
+
 }
 
 @media only all and (max-width: 320px) {
@@ -540,6 +548,6 @@ display: block;
     }
 
     .blog a {
-        font-size: 1.0em;
+        font-size: 0.8em;
     }
 }
