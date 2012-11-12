@@ -565,4 +565,9 @@ display: block;
         float: left;
         font-size: 12px;
     }
+
+    #disqus_thread {
+      display: none;
+   }
+
 }
