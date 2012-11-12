@@ -529,6 +529,14 @@ display: block;
 
 @media only all and (max-width: 320px) {
 
+    body {
+        width: 320px;
+    }
+
+    .page_header p{
+       font-size: 0.8em;
+    }
+
     .social_links_sidebar {
         display: none;
     }
@@ -550,5 +558,11 @@ display: block;
 
     .blog a {
         font-size: 0.8em;
+    }
+
+    .posts header a{
+        clear: both;
+        float: left;
+        font-size: 12px;
     }
 }
