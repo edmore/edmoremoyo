@@ -545,6 +545,7 @@ display: block;
         margin-bottom: 9px;
         clear: both;
         float: left;
+        font-size: 12px;
     }
 
     .blog a {
