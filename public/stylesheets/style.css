@@ -517,7 +517,8 @@ width: auto;
 display: block;
 }
 
-@media only all and (min-width: 321px) and (max-width: 768px) {
+/* tablet */
+@media only all and (min-width: 321px) and (max-width: 640px) {
 
     .social_links_sidebar {
         display: none;
@@ -533,6 +534,7 @@ display: block;
 
 }
 
+/* mobile */
 @media only all and (max-width: 320px) {
 
     .page_header p{
@@ -541,6 +543,9 @@ display: block;
 
     .social_links_sidebar {
         display: none;
+    }
+    .page_header nav ul{
+        text-shadow: 0px;
     }
 
     .page_header nav ul li {
@@ -573,7 +578,7 @@ display: block;
     }
 
     .posts, .about {
-        width: 40%;
+        width: 35%;
     }
 
     .posts img{
