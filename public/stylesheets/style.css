@@ -564,8 +564,10 @@ display: block;
         display: none;
     }
 
+
     .page_footer p img{
         float: left;
+        margin-top: 10px;
     }
 
     article.blogs footer {
