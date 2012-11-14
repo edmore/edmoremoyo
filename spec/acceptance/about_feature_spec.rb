@@ -37,13 +37,13 @@ feature "About Feature", %q{
   scenario "I should see a link to the projects page" do
     visit homepage
     click_link("Projects")
-    page.should have_css("h2", :text => "#projects")
+    page.should have_css("h2", :text => "#work_and_play")
   end
 
   scenario "I should see a link to the blogs page" do
     visit homepage
     click_link("Thoughts in Bits")
-    page.should have_css("h2", :text => "#blog_index")
+    page.should have_css("h2", :text => "#posts")
   end
 
   scenario "I should see a link to the contacts page" do
