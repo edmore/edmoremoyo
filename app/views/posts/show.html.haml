@@ -5,7 +5,7 @@
     %header
       %h2= @post.title
       =link_to "Back to Index" , blog_path
-      %p= @post.date_to_readable
+      %p= " #{@post.date_to_readable}"
     = raw(@post.body_to_html)
     %footer
 
