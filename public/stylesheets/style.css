@@ -518,7 +518,7 @@ display: block;
 }
 
 /* tablet */
-@media only all and (min-width: 321px) and (max-width: 640px) {
+@media only all and (min-width: 321px) and (max-width: 768px) {
 
     .social_links_sidebar {
         display: none;
@@ -552,8 +552,20 @@ display: block;
         display: block;
     }
 
-    .page_footer {
+    .page_footer nav{
         display:none;
+    }
+
+    .page_footer p span{
+        display: none;
+    }
+
+    .page_footer p a{
+        display: none;
+    }
+
+    .page_footer p img{
+        float: left;
     }
 
     article.blogs footer {
