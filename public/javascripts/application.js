@@ -5,13 +5,12 @@ $(function(){
     // Randomize profile description
     var description = ["The Official Web Footprint",
                        "Computer Scientist, Husband and Father",
-                       "Ruby, JavaScript and Lisp Enthusiast",
-		       "Est. 1982"
+                       "Ruby, JavaScript and Lisp Enthusiast"
                        ];
     var randomizer = function(){
         var random_number = Math.floor(Math.random() * description.length),
             random_description = description[random_number];
-        $(".page_header > p").text(random_description);
+        $(".page_header > p > span").text(random_description);
     };
 
     // Transform group of selectors
