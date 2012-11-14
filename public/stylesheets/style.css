@@ -510,3 +510,67 @@ width: auto;
 .projects div ul>li a{
 display: block;
 }
+
+@media only all and (min-width: 321px) and (max-width: 768px) {
+
+    .social_links_sidebar {
+        display: none;
+    }
+
+    .blog a {
+        font-size: 1.0em;
+    }
+
+    .page_header a {
+        font-size: 1.0em;
+    }
+
+}
+
+@media only all and (max-width: 320px) {
+
+    .page_header p{
+       font-size: 0.8em;
+    }
+
+    .social_links_sidebar {
+        display: none;
+    }
+
+    .page_header nav ul li {
+        display: block;
+    }
+
+    .page_footer {
+        display:none;
+    }
+
+    article.blogs footer {
+        margin-bottom: 9px;
+        clear: both;
+        float: left;
+        font-size: 12px;
+    }
+
+    .blog a {
+        font-size: 0.8em;
+    }
+
+    .posts header a{
+        clear: both;
+        float: left;
+        font-size: 12px;
+    }
+
+    #disqus_thread {
+      display: none;
+   }
+
+   .posts {
+      width: 40%;
+   }
+
+   .posts img{
+      max-width: 240px;
+   }
+}
