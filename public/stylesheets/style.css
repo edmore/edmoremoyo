@@ -572,7 +572,7 @@ display: block;
         display: none;
     }
 
-    .posts {
+    .posts, .about {
         width: 40%;
     }
 
@@ -605,5 +605,4 @@ display: block;
         margin-top: 0px;
         margin-bottom: 0px;
     }
-
 }
