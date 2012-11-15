@@ -524,7 +524,7 @@ display: block;
         display: none;
     }
 
-    .page_header, .blog, page_footer {
+    .page_header, .blog, .page_footer, .about {
         width: inherit;
     }
 
@@ -545,7 +545,7 @@ display: block;
         display: none;
     }
 
-    .page_header, .blog, page_footer {
+    .page_header, .blog, .page_footer, .about {
         width: inherit;
     }
 
