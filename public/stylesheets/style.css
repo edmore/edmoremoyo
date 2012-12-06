@@ -528,6 +528,10 @@ display: block;
         display: none;
     }
 
+    .page_header, .blog, .page_footer, .about, .blogs {
+        width: inherit;
+    }
+
     .blog a {
         font-size: 1.0em;
     }
@@ -541,13 +545,18 @@ display: block;
 /* mobile */
 @media only all and (max-width: 320px) {
 
+    .social_links_sidebar {
+        display: none;
+    }
+
+    .page_header, .blog, .page_footer, .about, .blogs {
+        width: inherit;
+    }
+
     .page_header p{
         font-size: 0.8em;
     }
 
-    .social_links_sidebar {
-        display: none;
-    }
     .page_header nav ul{
         text-shadow: 0px;
     }
