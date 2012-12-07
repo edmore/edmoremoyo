@@ -68,8 +68,6 @@ transform: rotate(8deg);
   font-size: 1.2em;
   font-family: Gothic;
   color: #640B00;
-  text-decoration: none;
-  border: 1px solid #000;
   padding: 3px 5px;
   margin-top: 10px;
   -webkit-transition: background 0.5s ease, color 0.3s linear;
@@ -524,7 +522,7 @@ display: block;
         display: none;
     }
 
-    .page_header, .blog, .page_footer, .about, .blogs {
+    .page_header, .blog, .page_footer, .about, .blogs{
         width: inherit;
     }
 
@@ -541,11 +539,12 @@ display: block;
 /* mobile */
 @media only all and (max-width: 320px) {
 
+
     .social_links_sidebar {
         display: none;
     }
 
-    .page_header, .blog, .page_footer, .about, .blogs {
+    .page_header, .blog, .page_footer, .about, .blogs{
         width: inherit;
     }
 
