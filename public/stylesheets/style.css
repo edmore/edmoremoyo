@@ -45,6 +45,10 @@ body{
   opacity: 0.8;
 }
 
+.social_links_sidebar h3{
+  text-decoration: underline;
+}
+
 .social_links_sidebar img:hover{
 -webkit-backface-visibility: hidden;
 -webkit-transform: rotate(8deg);
