@@ -15,6 +15,10 @@ body{
   margin-top: 10px;
 }
 
+.social_links_sidebar a:hover{
+  margin-left: 5px;
+}
+
 .page_footer a{
   background-color: rgba(0, 0, 0, 0.05);
   font-family: Gothic;
