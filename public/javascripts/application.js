@@ -55,7 +55,7 @@ $(function(){
 
     // Ensure that the top level links indicate page one is on
     if(window.location.pathname !== "/"){
-        $("a[href='"+ window.location.pathname +"']").css("border-top", "2px solid #640B00");
+        $("a[href='"+ window.location.pathname +"']").css("background-color", "#000");
     }
 
     // On load hide the description on the projects page
