@@ -6,10 +6,10 @@ $(function(){
     var description = ["The Official Web Footprint",
                        "Computer Scientist, Husband and Father",
                        "Ruby, JavaScript and Lisp Enthusiast"
-                       ];
+                      ];
     var randomizer = function(){
         var random_number = Math.floor(Math.random() * description.length),
-            random_description = description[random_number];
+        random_description = description[random_number];
         $(".page_header > p > span").text(random_description);
     };
 
@@ -29,33 +29,37 @@ $(function(){
 
     // Twitter plugin
     $(".tweet").tweet({
-            username: "etmoyo",
-            avatar_size: 32,
-            count: 1,
-            loading_text: "Loading tweets..."
+        username: "etmoyo",
+        avatar_size: 32,
+        count: 1,
+        loading_text: "Loading tweets..."
+    });
+
+    // Projects page - project information
+    $(".projects article > p").hide();
+
+    $(".projects header > a").click(function(){
+        var content$ = $(this).closest('header').parent().find('p');
+        content$.toggle('fast', function(){
+            var link$ = $(this).parent().find('header').find('a');
+            $(this).is(':hidden') ? link$.text("[+]") : link$.text("[-]");
         });
+    });
 
-   // Projects page - project information
-   $(".projects article > p").hide();
-
-   $(".projects header > a").click(function(){
-       var content$ = $(this).closest('header').parent().find('p');
-       content$.toggle('fast', function(){
-           var link$ = $(this).parent().find('header').find('a');
-           $(this).is(':hidden') ? link$.text("[+]") : link$.text("[-]");
-       });
-   });
-
-   // Open popups on a separate page
+    // Open popups on a separate page
     $(".popup").click(function(event){
         event.preventDefault();
         var href = $(this).attr("href"),
-            popup = window.open (href,"");
+        popup = window.open (href,"");
     });
 
     // Ensure that the top level links indicate page one is on
     if(window.location.pathname !== "/"){
         $("a[href='"+ window.location.pathname +"']").css("background-color", "#000");
+    }
+    // Ensure blog link highlighted for blog posts
+    if(window.location.pathname.match(/blog/)){
+        $("header nav a[href='/blog']").css("background-color", "#000");
     }
 
     // On load hide the description on the projects page
@@ -73,5 +77,5 @@ $(function(){
     transfoglify("article.blogs > header", -2, 2);
     transfoglify(".about header", -2, 0);
 
-   $(".posts blockquote").css({"border-left" : "5px solid #DDD", "padding-left" : 10});
+    $(".posts blockquote").css({"border-left" : "5px solid #DDD", "padding-left" : 10});
 });
