@@ -1,4 +1,11 @@
-== Welcome to My Personal website
+Welcome to @edmoremoyo
 
-This website is my personal playground and any new technologies that I wish to try out will be tried out here.
-The site is made in Ruby, Rails, HTML5, CSS3, HAML
+This website is my personal playground and will always be in dev mode. 
+> Coded in:
+- Ruby (Rails)
+- JavaScript
+- HTML (templating in HAML)
+- CSS
+
+----------------------------------------------------------------------------
+NB: I target only modern browsers, just a tad bit of "non-browser" support.
