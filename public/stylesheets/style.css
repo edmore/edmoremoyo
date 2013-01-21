@@ -384,9 +384,8 @@ padding: 10px;
 
 .about p a{
 color: #453625;
-text-decoration: none;
-border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-border-bottom-color: #640B00;
+border-bottom: 1px solid #453625;
+border-bottom-color: #453625;
 }
 
 .about p a:hover{
