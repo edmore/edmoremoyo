@@ -21,5 +21,7 @@
     = javascript_include_tag "jquery.tweet.js"
     = csrf_meta_tag
     = javascript_include_tag "ga.js"
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });</script>
+    <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   %body
     = yield
