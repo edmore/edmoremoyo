@@ -1,3 +1,8 @@
+html{
+  border-top: 20px solid #640B00;
+  margin: 0px;
+}
+
 body{
   width:960px;
   margin:15px auto;
@@ -210,6 +215,7 @@ section p{
 
 .about p, .post p{
   font-family: Gothic;
+  letter-spacing: 0.1em;
 }
 
 h1{
