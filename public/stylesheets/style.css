@@ -368,7 +368,7 @@ border-radius:5px;
   width: 90%
 }
 
-.commit input{
+#contact_submit_action button{
   width: 100px;
   border: 2px solid #640B00;
   float: left;

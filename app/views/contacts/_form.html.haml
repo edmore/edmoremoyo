@@ -5,4 +5,4 @@
     = p.input :body, :as => :text, :input_html => {:required => "required",:rows => 10, :placeholder => " Enter message here ... "}, :label => "Message"
     - if @my_button != 'show'
       = raw(recaptcha_tags)
-      = p.commit_button "Send"
+      = p.action :submit, :as => :button, :label => "Send"
