@@ -11,7 +11,7 @@ development:
   reconnect: false
   database: personal_blog_development
   pool: 5
-  username: blog_user
+  username: root
   password:
   socket: /tmp/mysql.sock
 
@@ -24,9 +24,8 @@ test:
   reconnect: false
   database: personal_blog_test
   pool: 5
-  username: blog_user
+  username: root
   password:
-  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql2
