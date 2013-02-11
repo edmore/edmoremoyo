@@ -1,6 +1,6 @@
 Welcome to @edmoremoyo
 
-https://travis-ci.org/edmore/edmoremoyo.png
+[![Build Status](https://travis-ci.org/edmore/edmoremoyo.png)](https://travis-ci.org/edmore/edmoremoyo)
 
 This website is my personal playground and will always be in dev mode.
 > Coded in:
