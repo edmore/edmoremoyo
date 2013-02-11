@@ -21,7 +21,7 @@ module NavigationHelpers
     "/projects"
   end
 
-  def thoughts_in_bits
+  def thoughts
     "/posts/overview"
   end
 

@@ -42,7 +42,7 @@ feature "About Feature", %q{
 
   scenario "I should see a link to the blogs page" do
     visit homepage
-    click_link("Thoughts in Bits")
+    click_link("Thoughts")
     page.should have_css("h2", :text => "#posts")
   end
 

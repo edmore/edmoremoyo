@@ -8,7 +8,7 @@ feature "Blog Feature", %q{
 
 
   scenario "displays message when there are no posts" do
-    visit thoughts_in_bits
+    visit thoughts
     page.should have_content("Sorry no posts present at this time.")
   end
 
@@ -16,7 +16,7 @@ feature "Blog Feature", %q{
     post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
     post2 = FactoryGirl.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
 
-    visit thoughts_in_bits
+    visit thoughts
     page.should have_css("h2", :text => "posts")
     page.should have_css("article#blog_#{post1.id} header>h3>a", :text => "The test blog")
     page.should have_css("article#blog_#{post1.id} footer", :text => post1.date_to_readable)
@@ -25,8 +25,8 @@ feature "Blog Feature", %q{
   scenario "I should see a particular blog post" do
     post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
     post2 = FactoryGirl.create(:post, :title => "The test blog 2", :body => "The blog body 2", :created_at => Time.current + 1.day)
-    visit thoughts_in_bits
-    click_link("The test blog")
+    visit thoughts
+    find('a[title="The test blog"]').click
     page.should have_css("h2", :text => "The test blog")
     page.should have_css(".post header p", :text => "# #{post1.date_to_readable}" )
     page.should have_css("article#post_#{post1.id} p", :text => "The blog body")
@@ -49,7 +49,7 @@ feature "Blog Feature", %q{
 
   scenario "navigating back to blog index" do
     post1 = FactoryGirl.create(:post, :title => "The test blog", :body => "The blog body")
-    visit thoughts_in_bits
+    visit thoughts
     click_link("The test blog")
     current_path.should == "/blog/#{post1.title.parameterize}"
     click_link("Back to Index")
