@@ -1,6 +1,8 @@
 Welcome to @edmoremoyo
 
-This website is my personal playground and will always be in dev mode. 
+https://travis-ci.org/[edmore]/[edmoremoyo].png
+
+This website is my personal playground and will always be in dev mode.
 > Coded in:
 - Ruby (Rails)
 - JavaScript
