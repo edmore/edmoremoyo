@@ -1,6 +1,6 @@
 module Github
   require 'open-uri'
-  @api_url = "http://github.com/api/v2/json"
+  @api_url = "https://api.github.com"
 
   class << self
     attr_accessor :api_url
@@ -17,33 +17,29 @@ module Github
     end
 
     def list_commits
-      open_api("#{@api}/commits/list/#{@user}/#{@repo}/#{@branch}")
-    end
-
-    def commits_on_file(file_name)
-      open_api("#{@api}/commits/list/#{@user}/#{@repo}/#{@branch}/#{file_name}")
+      open_api("#{@api}/repos/#{@user}/#{@repo}/commits")
     end
 
     def commit(commit_id)
-      open_api("#{@api}/commits/show/#{@user}/#{@repo}/#{commit_id}")
+      open_api("#{@api}/repos/#{@user}/#{@repo}/commits/#{commit_id}")
     end
 
-    def last_commit_message
-      with_commits_list { |o| o["commits"] ? o["commits"][0]["message"] : o }
+    def most_recent_message
+      with_commits_list {|o| o.first["commit"]["message"] }
     end
 
-    def last_commit_date
+    def most_recent_date
       with_commits_list do |o|
-	o["commits"] ? DateTime.parse(o["commits"][0]["committed_date"]).strftime("%d %B %Y %I:%M%p") : o
+        Time.parse(o.first["commit"]["committer"]["date"]).strftime("%d %B %Y %I:%M%p")
       end
     end
 
-    def last_commit_url
-      with_commits_list { |o| o["commits"] ? o["commits"][0]["url"] : o }
+    def most_recent_url
+      with_commits_list { |o| o.first["commit"]["url"] }
     end
 
     def last_committer
-      with_commits_list { |o| o["commits"] ? o["commits"][0]["committer"]["name"] : o }
+      with_commits_list { |o| o.first["commit"]["committer"]["name"] }
     end
 
     private
@@ -72,5 +68,4 @@ module Github
       end
     end
   end
-
 end
