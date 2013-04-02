@@ -53,13 +53,14 @@ $(function(){
         popup = window.open (href,"");
     });
 
-    // Ensure that the top level links indicate page one is on
-    if(window.location.pathname !== "/"){
-        $("a[href='"+ window.location.pathname +"']").css("background-color", "#640B00");
-    }
-    // Ensure blog link highlighted for blog posts
-    if(window.location.pathname.match(/blog/)){
+    if(window.location.pathname.match(/blog.+/)){
+        // Ensure blog link highlighted for blog posts
+        document.title += (" / Thoughts / " + $(".posts > header > h2").text());
         $("header nav a[href='/blog']").css("background-color", "#640B00");
+    }else if(window.location.pathname !== "/"){
+        // Ensure that the top level links indicate page one is on
+        document.title += (" / " + $("a[href='"+ window.location.pathname +"']").text());
+        $("a[href='"+ window.location.pathname +"']").css("background-color", "#640B00");
     }
 
     // On load hide the description on the projects page

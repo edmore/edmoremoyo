@@ -5,13 +5,6 @@ module ApplicationHelper
     end
   end
 
-  def page_title
-    title = request.fullpath.split("/").reject(&:empty?)
-    return "edmore_moyo" if title.blank?
-    return "edmore_moyo" + " | " + title[0].titleize  unless title[1].present?
-    "edmore_moyo" + " | " + title[0].titleize + " : " + title[1].titleize
-  end
-
   def copyright_year
     Time.current.year
   end
